@@ -108,6 +108,77 @@
         color: var(--text-inverse);
       }
 
+      .mobile-nav-toggle,
+.mobile-nav-close,
+.mobile-nav-overlay {
+  display: none;
+}
+
+@media (max-width: 1120px) {
+  .mobile-nav-toggle {
+    display: inline-flex;
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    z-index: 1200;
+    width: 56px;
+    height: 56px;
+    border: 0;
+    border-radius: 999px;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary);
+    color: var(--text-inverse);
+    box-shadow: var(--shadow);
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .mobile-nav-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1090;
+    background: rgba(0, 0, 0, 0.35);
+  }
+
+  .mobile-nav-overlay.is-open {
+    display: block;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1100;
+    width: min(84vw, 340px);
+    height: 100dvh;
+    transform: translateX(-100%);
+    transition: transform 0.25s ease;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.22);
+  }
+
+  .sidebar.is-open {
+    transform: translateX(0);
+  }
+
+  .mobile-nav-close {
+    display: inline-flex;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 40px;
+    height: 40px;
+    border: 0;
+    border-radius: 999px;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.12);
+    color: var(--text-inverse);
+    font-size: 20px;
+    cursor: pointer;
+  }
+}
+
       .brand {
         margin-bottom: var(--space-6);
       }
@@ -740,64 +811,74 @@
   </head>
   <body>
     <div class="app-shell">
-      <aside class="sidebar">
-        <div class="brand">
-          <h1>Agrostock DS</h1>
-          <p>
-            Design System V1, documentacion base para Ionic y Angular, con escala DVH,
-            variante admin, uso mandatorio de app-button y reglas reales de template.
-          </p>
-        </div>
+      <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Abrir navegación">
+  ☰
+</button>
 
-        <div class="nav-group">
-          <div class="nav-title">Foundation</div>
-          <ul class="nav-list">
-            <li><a href="#contexto">Contexto real</a></li>
-            <li><a href="#foundation">Foundation V1</a></li>
-            <li><a href="#admin">Variante admin</a></li>
-          </ul>
-        </div>
+<div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
 
-        <div class="nav-group">
-          <div class="nav-title">Reglas base</div>
-          <ul class="nav-list">
-            <li><a href="#icons">SVG icons</a></li>
-            <li><a href="#clicks">app-button</a></li>
-            <li><a href="#welcome">Welcome</a></li>
-            <li><a href="#search">Search singleton</a></li>
-          </ul>
-        </div>
+<aside class="sidebar" id="mobileSidebar">
+  <button class="mobile-nav-close" id="mobileNavClose" aria-label="Cerrar navegación">
+    ✕
+  </button>
 
-        <div class="nav-group">
-          <div class="nav-title">Estructura</div>
-          <ul class="nav-list">
-            <li><a href="#header">Header real</a></li>
-            <li><a href="#layout">Layout</a></li>
-            <li><a href="#helper">Helper y actions</a></li>
-          </ul>
-        </div>
+  <div class="brand">
+    <h1>Agrostock DS</h1>
+    <p>
+      Design System V1, documentacion base para Ionic y Angular, con escala DVH,
+      variante admin, uso mandatorio de app-button y reglas reales de template.
+    </p>
+  </div>
 
-        <div class="nav-group">
-          <div class="nav-title">Componentes</div>
-          <ul class="nav-list">
-            <li><a href="#inputs">Inputs</a></li>
-            <li><a href="#buttons">Buttons</a></li>
-            <li><a href="#feedback">Feedback</a></li>
-            <li><a href="#cards">Data card</a></li>
-            <li><a href="#grid-menu">Grid menu</a></li>
-          </ul>
-        </div>
+  <div class="nav-group">
+    <div class="nav-title">Foundation</div>
+    <ul class="nav-list">
+      <li><a href="#contexto">Contexto real</a></li>
+      <li><a href="#foundation">Foundation V1</a></li>
+      <li><a href="#admin">Variante admin</a></li>
+    </ul>
+  </div>
 
-        <div class="nav-group">
-          <div class="nav-title">Templates reales</div>
-          <ul class="nav-list">
-            <li><a href="#template-welcome-search">Welcome + search</a></li>
-            <li><a href="#template-main-no-filter">Main sin filter</a></li>
-            <li><a href="#template-main-filter">Main con filter</a></li>
-            <li><a href="#rules">Reglas finales</a></li>
-          </ul>
-        </div>
-      </aside>
+  <div class="nav-group">
+    <div class="nav-title">Reglas base</div>
+    <ul class="nav-list">
+      <li><a href="#icons">SVG icons</a></li>
+      <li><a href="#clicks">app-button</a></li>
+      <li><a href="#welcome">Welcome</a></li>
+      <li><a href="#search">Search singleton</a></li>
+    </ul>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-title">Estructura</div>
+    <ul class="nav-list">
+      <li><a href="#header">Header real</a></li>
+      <li><a href="#layout">Layout</a></li>
+      <li><a href="#helper">Helper y actions</a></li>
+    </ul>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-title">Componentes</div>
+    <ul class="nav-list">
+      <li><a href="#inputs">Inputs</a></li>
+      <li><a href="#buttons">Buttons</a></li>
+      <li><a href="#feedback">Feedback</a></li>
+      <li><a href="#cards">Data card</a></li>
+      <li><a href="#grid-menu">Grid menu</a></li>
+    </ul>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-title">Templates reales</div>
+    <ul class="nav-list">
+      <li><a href="#template-welcome-search">Welcome + search</a></li>
+      <li><a href="#template-main-no-filter">Main sin filter</a></li>
+      <li><a href="#template-main-filter">Main con filter</a></li>
+      <li><a href="#rules">Reglas finales</a></li>
+    </ul>
+  </div>
+</aside>
 
       <main class="content">
         <section class="hero" id="contexto">
@@ -2065,5 +2146,30 @@
         </section>
       </main>
     </div>
+    <script>
+  const mobileSidebar = document.getElementById('mobileSidebar');
+  const mobileNavToggle = document.getElementById('mobileNavToggle');
+  const mobileNavClose = document.getElementById('mobileNavClose');
+  const mobileNavOverlay = document.getElementById('mobileNavOverlay');
+  const mobileNavLinks = mobileSidebar.querySelectorAll('a');
+
+  function openMobileNav() {
+    mobileSidebar.classList.add('is-open');
+    mobileNavOverlay.classList.add('is-open');
+  }
+
+  function closeMobileNav() {
+    mobileSidebar.classList.remove('is-open');
+    mobileNavOverlay.classList.remove('is-open');
+  }
+
+  mobileNavToggle.addEventListener('click', openMobileNav);
+  mobileNavClose.addEventListener('click', closeMobileNav);
+  mobileNavOverlay.addEventListener('click', closeMobileNav);
+
+  mobileNavLinks.forEach(link => {
+    link.addEventListener('click', closeMobileNav);
+  });
+</script>
   </body>
 </html>
