@@ -1,2732 +1,2857 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Agrostock Design System V1 - Ionic Angular</title>
-    <style>
-      
-      :root {
-        --bg: #eef1f3;
-        --surface: #ffffff;
-        --surface-soft: #f7f8fa;
-        --surface-soft-2: #f0f2ff;
-        --sidebar: #0e123f;
-        --sidebar-2: #29339e;
-        --text: #444444;
-        --text-soft: #5d5d5d;
-        --text-inverse: #fafafa;
-        --primary-dark: #0e123f;
-        --primary: #1a237e;
-        --primary-medium: #29339e;
-        --primary-light: #c3c8e2;
-        --primary-lightest: #f0f2ff;
-        --success-dark: #1d5c29;
-        --success: #29833b;
-        --success-medium: #35a54b;
-        --success-light: #d1e7d5;
-        --success-lightest: #f0fff3;
-        --warn-dark: #6e2e36;
-        --warn: #8f3c46;
-        --warn-medium: #b9505c;
-        --warn-light: #e4d0d3;
-        --warn-lightest: #ffebee;
-        --teal-dark: #00796b;
-        --teal: #00897b;
-        --teal-light: #00acc1;
-        --blue-grey-darkest: #263238;
-        --blue-grey-dark: #78909c;
-        --blue-grey: #90a4ae;
-        --blue-grey-light: #b5cdda;
-        --amber-dark: #c29100;
-        --amber: #ffc107;
-        --amber-light: #ffeaac;
-        --orange-dark: #c56300;
-        --orange: #f57c00;
-        --orange-light: #ffaf5f;
-        --divider: rgba(0, 0, 0, 0.12);
-        --divider-hover: rgba(0, 0, 0, 0.22);
-        --bg-half: rgba(255, 255, 255, 0.5);
-        --disabled-text: rgba(0, 0, 0, 0.32);
-        --disabled-bg: rgba(0, 0, 0, 0.22);
 
-        --radius-sm: 10px;
-        --radius-md: 16px;
-        --radius-lg: 24px;
-        --radius-xl: 32px;
-        --radius-2xl: 40px;
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agrostock Design System V1 - Ionic Angular</title>
+  <style>
+    :root {
+      --bg: #eef1f3;
+      --surface: #ffffff;
+      --surface-soft: #f7f8fa;
+      --surface-soft-2: #f0f2ff;
+      --sidebar: #0e123f;
+      --sidebar-2: #29339e;
+      --text: #444444;
+      --text-soft: #5d5d5d;
+      --text-inverse: #fafafa;
+      --primary-dark: #0e123f;
+      --primary: #1a237e;
+      --primary-medium: #29339e;
+      --primary-light: #c3c8e2;
+      --primary-lightest: #f0f2ff;
+      --success-dark: #1d5c29;
+      --success: #29833b;
+      --success-medium: #35a54b;
+      --success-light: #d1e7d5;
+      --success-lightest: #f0fff3;
+      --warn-dark: #6e2e36;
+      --warn: #8f3c46;
+      --warn-medium: #b9505c;
+      --warn-light: #e4d0d3;
+      --warn-lightest: #ffebee;
+      --teal-dark: #00796b;
+      --teal: #00897b;
+      --teal-light: #00acc1;
+      --blue-grey-darkest: #263238;
+      --blue-grey-dark: #78909c;
+      --blue-grey: #90a4ae;
+      --blue-grey-light: #b5cdda;
+      --amber-dark: #c29100;
+      --amber: #ffc107;
+      --amber-light: #ffeaac;
+      --orange-dark: #c56300;
+      --orange: #f57c00;
+      --orange-light: #ffaf5f;
+      --divider: rgba(0, 0, 0, 0.12);
+      --divider-hover: rgba(0, 0, 0, 0.22);
+      --bg-half: rgba(255, 255, 255, 0.5);
+      --disabled-text: rgba(0, 0, 0, 0.32);
+      --disabled-bg: rgba(0, 0, 0, 0.22);
 
-        --space-1: 8px;
-        --space-2: 12px;
-        --space-3: 16px;
-        --space-4: 20px;
-        --space-5: 24px;
-        --space-6: 32px;
-        --space-7: 40px;
-        --space-8: 56px;
+      --radius-sm: 10px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --radius-xl: 32px;
+      --radius-2xl: 40px;
 
-        --shadow: 0 12px 30px rgba(16, 18, 63, 0.08);
+      --space-1: 8px;
+      --space-2: 12px;
+      --space-3: 16px;
+      --space-4: 20px;
+      --space-5: 24px;
+      --space-6: 32px;
+      --space-7: 40px;
+      --space-8: 56px;
 
-        --font-xs: 12px;
-        --font-sm: 14px;
-        --font-md: 16px;
-        --font-lg: 20px;
-        --font-xl: 28px;
-        --font-xxl: 40px;
+      --shadow: 0 12px 30px rgba(16, 18, 63, 0.08);
 
-        --mono: "Roboto Mono", monospace;
+      --font-xs: 12px;
+      --font-sm: 14px;
+      --font-md: 16px;
+      --font-lg: 20px;
+      --font-xl: 28px;
+      --font-xxl: 40px;
+
+      --mono: "Roboto Mono", monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    .app-shell {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      min-height: 100vh;
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 0;
+      align-self: start;
+      height: 100vh;
+      overflow: auto;
+      padding: var(--space-6);
+      background: linear-gradient(180deg, var(--sidebar), var(--sidebar-2));
+      color: var(--text-inverse);
+    }
+
+    .mobile-nav-toggle,
+    .mobile-nav-close,
+    .mobile-nav-overlay {
+      display: none;
+    }
+
+    @media (max-width: 1120px) {
+      .mobile-nav-toggle {
+        display: inline-flex;
+        position: fixed;
+        right: 16px;
+        bottom: 16px;
+        z-index: 1200;
+        width: 56px;
+        height: 56px;
+        border: 0;
+        border-radius: 999px;
+        align-items: center;
+        justify-content: center;
+        background: var(--primary);
+        color: var(--text-inverse);
+        box-shadow: var(--shadow);
+        font-size: 24px;
+        cursor: pointer;
       }
 
-      * {
-        box-sizing: border-box;
+      .mobile-nav-overlay {
+        position: fixed;
+        inset: 0;
+        z-index: 1090;
+        background: rgba(0, 0, 0, 0.35);
       }
 
-      html {
-        scroll-behavior: smooth;
-      }
-
-      body {
-        margin: 0;
-        font-family: Roboto, Arial, sans-serif;
-        background: var(--bg);
-        color: var(--text);
-      }
-
-      .app-shell {
-        display: grid;
-        grid-template-columns: 320px 1fr;
-        min-height: 100vh;
+      .mobile-nav-overlay.is-open {
+        display: block;
       }
 
       .sidebar {
-        position: sticky;
+        position: fixed;
         top: 0;
-        align-self: start;
-        height: 100vh;
-        overflow: auto;
-        padding: var(--space-6);
-        background: linear-gradient(180deg, var(--sidebar), var(--sidebar-2));
-        color: var(--text-inverse);
+        left: 0;
+        z-index: 1100;
+        width: min(84vw, 340px);
+        height: 100dvh;
+        transform: translateX(-100%);
+        transition: transform 0.25s ease;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.22);
       }
 
-      .mobile-nav-toggle,
-.mobile-nav-close,
-.mobile-nav-overlay {
-  display: none;
-}
-
-@media (max-width: 1120px) {
-  .mobile-nav-toggle {
-    display: inline-flex;
-    position: fixed;
-    right: 16px;
-    bottom: 16px;
-    z-index: 1200;
-    width: 56px;
-    height: 56px;
-    border: 0;
-    border-radius: 999px;
-    align-items: center;
-    justify-content: center;
-    background: var(--primary);
-    color: var(--text-inverse);
-    box-shadow: var(--shadow);
-    font-size: 24px;
-    cursor: pointer;
-  }
-
-  .mobile-nav-overlay {
-    position: fixed;
-    inset: 0;
-    z-index: 1090;
-    background: rgba(0, 0, 0, 0.35);
-  }
-
-  .mobile-nav-overlay.is-open {
-    display: block;
-  }
-
-  .sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1100;
-    width: min(84vw, 340px);
-    height: 100dvh;
-    transform: translateX(-100%);
-    transition: transform 0.25s ease;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.22);
-  }
-
-  .sidebar.is-open {
-    transform: translateX(0);
-  }
-
-  .mobile-nav-close {
-    display: inline-flex;
-    position: absolute;
-    top: 16px;
-    right: 16px;
-    width: 40px;
-    height: 40px;
-    border: 0;
-    border-radius: 999px;
-    align-items: center;
-    justify-content: center;
-    background: rgba(255, 255, 255, 0.12);
-    color: var(--text-inverse);
-    font-size: 20px;
-    cursor: pointer;
-  }
-}
-
-      .brand {
-        margin-bottom: var(--space-6);
+      .sidebar.is-open {
+        transform: translateX(0);
       }
 
-      .brand h1 {
-        margin: 0 0 var(--space-2);
-        font-size: var(--font-xl);
-        line-height: 1;
-      }
-
-      .brand p {
-        margin: 0;
-        color: rgba(250, 250, 250, 0.82);
-        font-size: var(--font-sm);
-        line-height: 1.6;
-      }
-
-      .nav-group + .nav-group {
-        margin-top: var(--space-5);
-      }
-
-      .nav-title {
-        margin-bottom: var(--space-2);
-        font-size: var(--font-xs);
-        text-transform: uppercase;
-        letter-spacing: 0.08em;
-        color: rgba(250, 250, 250, 0.65);
-      }
-
-      .nav-list {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
-
-      .nav-list li + li {
-        margin-top: 6px;
-      }
-
-      .nav-list a {
-        display: block;
-        padding: 10px 12px;
-        border-radius: 12px;
-        text-decoration: none;
-        color: var(--text-inverse);
-        font-size: var(--font-sm);
-      }
-
-      .nav-list a:hover {
-        background: rgba(255, 255, 255, 0.1);
-      }
-
-      .content {
-        padding: var(--space-7);
-      }
-
-      .hero {
-        padding: var(--space-8);
-        border-radius: var(--radius-xl);
-        background: linear-gradient(135deg, #ffffff, #f0f2ff);
-        border: 1px solid var(--divider);
-        box-shadow: var(--shadow);
-      }
-
-      .hero h2 {
-        margin: 0 0 var(--space-3);
-        font-size: clamp(32px, 4vw, 52px);
-        line-height: 1;
-        color: var(--primary);
-      }
-
-      .hero p {
-        margin: 0;
-        max-width: 980px;
-        line-height: 1.75;
-        color: var(--text-soft);
-      }
-
-      .section {
-        margin-top: var(--space-8);
-      }
-
-      .section-header {
-        margin-bottom: var(--space-5);
-      }
-
-      .eyebrow {
+      .mobile-nav-close {
         display: inline-flex;
-        align-items: center;
-        min-height: 30px;
-        padding: 0 10px;
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        width: 40px;
+        height: 40px;
+        border: 0;
         border-radius: 999px;
-        background: var(--primary-lightest);
-        color: var(--primary);
-        font-size: var(--font-xs);
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
+        align-items: center;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.12);
+        color: var(--text-inverse);
+        font-size: 20px;
+        cursor: pointer;
       }
+    }
 
-      .section-header h3 {
-        margin: var(--space-3) 0 var(--space-2);
-        font-size: var(--font-xl);
-        line-height: 1.1;
-      }
+    .brand {
+      margin-bottom: var(--space-6);
+    }
 
-      .section-header p {
-        margin: 0;
-        max-width: 1020px;
-        line-height: 1.75;
-        color: var(--text-soft);
-      }
+    .brand h1 {
+      margin: 0 0 var(--space-2);
+      font-size: var(--font-xl);
+      line-height: 1;
+    }
 
-      .grid {
-        display: grid;
-        gap: var(--space-4);
-      }
+    .brand p {
+      margin: 0;
+      color: rgba(250, 250, 250, 0.82);
+      font-size: var(--font-sm);
+      line-height: 1.6;
+    }
 
-      .grid.cards {
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    .nav-group+.nav-group {
+      margin-top: var(--space-5);
+    }
+
+    .nav-title {
+      margin-bottom: var(--space-2);
+      font-size: var(--font-xs);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: rgba(250, 250, 250, 0.65);
+    }
+
+    .nav-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .nav-list li+li {
+      margin-top: 6px;
+    }
+
+    .nav-list a {
+      display: block;
+      padding: 10px 12px;
+      border-radius: 12px;
+      text-decoration: none;
+      color: var(--text-inverse);
+      font-size: var(--font-sm);
+    }
+
+    .nav-list a:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .content {
+      padding: var(--space-7);
+    }
+
+    .hero {
+      padding: var(--space-8);
+      border-radius: var(--radius-xl);
+      background: linear-gradient(135deg, #ffffff, #f0f2ff);
+      border: 1px solid var(--divider);
+      box-shadow: var(--shadow);
+    }
+
+    .hero h2 {
+      margin: 0 0 var(--space-3);
+      font-size: clamp(32px, 4vw, 52px);
+      line-height: 1;
+      color: var(--primary);
+    }
+
+    .hero p {
+      margin: 0;
+      max-width: 980px;
+      line-height: 1.75;
+      color: var(--text-soft);
+    }
+
+    .section {
+      margin-top: var(--space-8);
+    }
+
+    .section-header {
+      margin-bottom: var(--space-5);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      min-height: 30px;
+      padding: 0 10px;
+      border-radius: 999px;
+      background: var(--primary-lightest);
+      color: var(--primary);
+      font-size: var(--font-xs);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .section-header h3 {
+      margin: var(--space-3) 0 var(--space-2);
+      font-size: var(--font-xl);
+      line-height: 1.1;
+    }
+
+    .section-header p {
+      margin: 0;
+      max-width: 1020px;
+      line-height: 1.75;
+      color: var(--text-soft);
+    }
+
+    .grid {
+      display: grid;
+      gap: var(--space-4);
+    }
+
+    .grid.cards {
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+
+    .grid.pattern {
+      grid-template-columns: minmax(380px, 1.04fr) minmax(320px, 0.96fr);
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--divider);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .card.pad {
+      padding: var(--space-5);
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: var(--space-3);
+      padding: var(--space-4) var(--space-5);
+      border-bottom: 1px solid var(--divider);
+      background: var(--surface-soft);
+    }
+
+    .card-header h4 {
+      margin: 0;
+      font-size: var(--font-md);
+    }
+
+    .card-header span {
+      color: var(--text-soft);
+      font-size: var(--font-sm);
+    }
+
+    .card-body {
+      padding: var(--space-5);
+    }
+
+    .info-list {
+      display: grid;
+      gap: var(--space-3);
+    }
+
+    .info-item {
+      padding: var(--space-3);
+      border: 1px solid var(--divider);
+      border-radius: var(--radius-md);
+      background: #fbfbfc;
+    }
+
+    .info-item strong {
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .code {
+      background: #151936;
+      color: #eff1ff;
+      border-radius: var(--radius-md);
+      padding: var(--space-4);
+      overflow: auto;
+      font-family: var(--mono);
+      font-size: 13px;
+      line-height: 1.65;
+      white-space: pre;
+    }
+
+    .preview {
+      border: 1px dashed var(--divider);
+      border-radius: var(--radius-lg);
+      background: linear-gradient(180deg, #fafbfc, #f4f6f8);
+      padding: var(--space-5);
+    }
+
+    .pill-row,
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 0 12px;
+      border-radius: 999px;
+      background: var(--primary-lightest);
+      color: var(--primary);
+      font-size: var(--font-xs);
+      font-weight: 700;
+    }
+
+    .sample-button {
+      min-height: 52px;
+      padding: 0 18px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border: 0;
+      border-radius: 999px;
+      font-weight: 700;
+      font-family: inherit;
+      cursor: default;
+    }
+
+    .sample-button.small {
+      min-height: 44px;
+      font-size: 13px;
+    }
+
+    .sample-button.medium {
+      min-height: 56px;
+      font-size: 14px;
+    }
+
+    .sample-button.large {
+      min-height: 68px;
+      font-size: 16px;
+    }
+
+    .sample-button.icon {
+      width: 52px;
+      padding: 0;
+    }
+
+    .sample-button.primary {
+      background: var(--primary);
+      color: var(--text-inverse);
+    }
+
+    .sample-button.primary-soft {
+      background: var(--primary-light);
+      color: var(--primary);
+    }
+
+    .sample-button.success {
+      background: var(--success);
+      color: var(--text-inverse);
+    }
+
+    .sample-button.warn {
+      background: var(--warn);
+      color: var(--text-inverse);
+    }
+
+    .sample-button.side {
+      background: #eceff3;
+      color: var(--text-soft);
+    }
+
+    .sample-button.main {
+      background: transparent;
+      color: var(--text);
+      border: 1px dashed var(--divider);
+    }
+
+    .sample-button.disabled {
+      background: var(--disabled-bg);
+      color: var(--disabled-text);
+    }
+
+    .group {
+      display: inline-flex;
+      border: 1px solid var(--divider);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .group .sample-button {
+      border-radius: 0;
+    }
+
+    .group .sample-button+.sample-button {
+      border-left: 1px solid var(--divider);
+    }
+
+    .mini-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: var(--space-4);
+      min-height: 92px;
+      padding: 18px 22px;
+      border-radius: 22px;
+      background: var(--surface);
+      border: 1px solid var(--divider);
+    }
+
+    .mini-header-side {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .icon-badge {
+      width: 42px;
+      height: 42px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      background: var(--primary-lightest);
+      color: var(--primary);
+      font-weight: 700;
+    }
+
+    .title-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .title-stack strong {
+      line-height: 1;
+    }
+
+    .title-stack span {
+      font-size: var(--font-sm);
+      color: var(--text-soft);
+    }
+
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 36px;
+      padding: 0 14px;
+      border-radius: 999px;
+      background: var(--success-lightest);
+      color: var(--success);
+      font-size: var(--font-sm);
+      font-weight: 700;
+    }
+
+    .flow-demo {
+      display: grid;
+      gap: var(--space-3);
+    }
+
+    .flow-block {
+      min-height: 72px;
+      padding: 18px 20px;
+      border-radius: 18px;
+      border: 1px solid var(--divider);
+      display: flex;
+      align-items: center;
+      background: var(--surface);
+    }
+
+    .flow-block.header {
+      background: #f3f5ff;
+    }
+
+    .flow-block.welcome {
+      background: #ffffff;
+    }
+
+    .flow-block.search {
+      background: #ffffff;
+    }
+
+    .flow-block.helper {
+      background: #fafbfc;
+    }
+
+    .flow-block.content {
+      background: #ffffff;
+      min-height: 180px;
+    }
+
+    .flow-block.actions {
+      background: #f8fafc;
+    }
+
+    .flow-block.filter {
+      background: #f8f9ff;
+    }
+
+    .search-shell {
+      display: grid;
+      gap: var(--space-3);
+    }
+
+    .search-bar {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-radius: 999px;
+      background: var(--surface);
+      border: 1px solid var(--divider);
+      padding: 0 20px;
+    }
+
+    .search-bar input,
+    .field input,
+    .field select {
+      width: 100%;
+      border: 0;
+      outline: none;
+      background: transparent;
+      font-family: inherit;
+      font-size: var(--font-md);
+      color: var(--text);
+    }
+
+    .field-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: var(--space-3);
+    }
+
+    .field {
+      display: grid;
+      gap: 8px;
+    }
+
+    .field label {
+      font-size: var(--font-sm);
+      color: var(--text-soft);
+      font-weight: 700;
+    }
+
+    .field-box {
+      min-height: 64px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 0 18px;
+      border-radius: 18px;
+      background: var(--surface);
+      border: 1px solid var(--divider);
+    }
+
+    .field-box.focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 4px rgba(26, 35, 126, 0.08);
+    }
+
+    .field-box.error {
+      border-color: #d64a58;
+      background: #fff6f7;
+    }
+
+    .field-box.disabled {
+      opacity: 0.58;
+    }
+
+    .toast-stack {
+      display: grid;
+      gap: var(--space-3);
+    }
+
+    .toast {
+      min-height: 54px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 0 16px;
+      border-radius: 16px;
+      font-weight: 700;
+    }
+
+    .toast.success {
+      background: var(--success-lightest);
+      color: var(--success);
+    }
+
+    .toast.error {
+      background: var(--warn-lightest);
+      color: var(--warn);
+    }
+
+    .toast.info {
+      background: #fff9e2;
+      color: var(--orange);
+    }
+
+    .progress-stack {
+      display: grid;
+      gap: var(--space-4);
+    }
+
+    .progress-item {
+      display: grid;
+      gap: 10px;
+    }
+
+    .progress-label {
+      display: flex;
+      justify-content: space-between;
+      font-weight: 700;
+      font-size: var(--font-sm);
+    }
+
+    .track {
+      height: 18px;
+      border-radius: 999px;
+      background: rgba(0, 0, 0, 0.12);
+      overflow: hidden;
+    }
+
+    .fill {
+      height: 100%;
+      border-radius: 999px;
+    }
+
+    .fill.good {
+      width: 86%;
+      background: var(--success);
+    }
+
+    .fill.regular {
+      width: 63%;
+      background: var(--amber);
+    }
+
+    .fill.bad {
+      width: 34%;
+      background: var(--orange);
+    }
+
+    .fill.warn {
+      width: 18%;
+      background: #f44336;
+    }
+
+    .data-card-demo {
+      display: flex;
+      align-items: center;
+      gap: var(--space-4);
+      padding: 20px;
+      border-radius: 26px;
+      border: 1px solid var(--divider);
+      background: var(--surface);
+    }
+
+    .data-card-demo.primary {
+      background: var(--primary-lightest);
+    }
+
+    .data-card-demo.success {
+      background: var(--success-lightest);
+    }
+
+    .data-card-demo.warn {
+      background: var(--warn-lightest);
+    }
+
+    .divider-y {
+      width: 1px;
+      align-self: stretch;
+      background: var(--divider);
+    }
+
+    .metrics {
+      display: flex;
+      justify-content: space-between;
+      gap: var(--space-4);
+      flex: 1;
+      flex-wrap: wrap;
+    }
+
+    .metric {
+      display: grid;
+      gap: 4px;
+    }
+
+    .metric small {
+      color: var(--text-soft);
+    }
+
+    .metric strong {
+      font-size: 24px;
+      line-height: 1;
+    }
+
+    .tiles {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-4);
+    }
+
+    .tile {
+      min-height: 190px;
+      padding: 24px;
+      border-radius: 30px;
+      color: var(--text-inverse);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: var(--shadow);
+    }
+
+    .tile.blue {
+      background: linear-gradient(135deg, var(--primary-dark), var(--primary-medium));
+    }
+
+    .tile.teal {
+      background: linear-gradient(135deg, var(--teal-dark), var(--teal-light));
+    }
+
+    .tile.grey {
+      background: linear-gradient(135deg, var(--blue-grey-dark), var(--blue-grey-light));
+    }
+
+    .tile-mark {
+      width: 68px;
+      height: 68px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.14);
+      font-size: 22px;
+      font-weight: 700;
+    }
+
+    .tile strong {
+      font-size: 24px;
+      line-height: 1.1;
+    }
+
+    .table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--surface);
+      border-radius: 18px;
+      overflow: hidden;
+    }
+
+    .table th,
+    .table td {
+      padding: 14px 16px;
+      text-align: left;
+      border-bottom: 1px solid var(--divider);
+      vertical-align: top;
+    }
+
+    .table th {
+      background: var(--surface-soft);
+      font-size: var(--font-sm);
+    }
+
+    .table code,
+    .info-item code,
+    .section code {
+      font-family: var(--mono);
+      font-size: 12px;
+      background: #f2f4f8;
+      padding: 2px 6px;
+      border-radius: 8px;
+    }
+
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: var(--space-8);
+      padding: var(--space-5);
+      border-radius: var(--radius-lg);
+      background: var(--primary-dark);
+      color: var(--text-inverse);
+    }
+
+    .footer p {
+      margin: 0;
+      line-height: 1.75;
+    }
+
+    @media (max-width: 1120px) {
+      .app-shell {
+        grid-template-columns: 1fr;
       }
 
       .grid.pattern {
-        grid-template-columns: minmax(380px, 1.04fr) minmax(320px, 0.96fr);
+        grid-template-columns: 1fr;
       }
+    }
 
-      .card {
-        background: var(--surface);
-        border: 1px solid var(--divider);
-        border-radius: var(--radius-lg);
-        box-shadow: var(--shadow);
-        overflow: hidden;
-      }
-
-      .card.pad {
+    @media (max-width: 760px) {
+      .content {
         padding: var(--space-5);
       }
 
-      .card-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: var(--space-3);
-        padding: var(--space-4) var(--space-5);
-        border-bottom: 1px solid var(--divider);
-        background: var(--surface-soft);
-      }
-
-      .card-header h4 {
-        margin: 0;
-        font-size: var(--font-md);
-      }
-
-      .card-header span {
-        color: var(--text-soft);
-        font-size: var(--font-sm);
-      }
-
-      .card-body {
-        padding: var(--space-5);
-      }
-
-      .info-list {
-        display: grid;
-        gap: var(--space-3);
-      }
-
-      .info-item {
-        padding: var(--space-3);
-        border: 1px solid var(--divider);
-        border-radius: var(--radius-md);
-        background: #fbfbfc;
-      }
-
-      .info-item strong {
-        display: block;
-        margin-bottom: 6px;
-      }
-
-      .code {
-        background: #151936;
-        color: #eff1ff;
-        border-radius: var(--radius-md);
-        padding: var(--space-4);
-        overflow: auto;
-        font-family: var(--mono);
-        font-size: 13px;
-        line-height: 1.65;
-        white-space: pre;
-      }
-
-      .preview {
-        border: 1px dashed var(--divider);
-        border-radius: var(--radius-lg);
-        background: linear-gradient(180deg, #fafbfc, #f4f6f8);
-        padding: var(--space-5);
-      }
-
-      .pill-row,
-      .button-row {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-      }
-
-      .pill {
-        display: inline-flex;
-        align-items: center;
-        min-height: 34px;
-        padding: 0 12px;
-        border-radius: 999px;
-        background: var(--primary-lightest);
-        color: var(--primary);
-        font-size: var(--font-xs);
-        font-weight: 700;
-      }
-
-      .sample-button {
-        min-height: 52px;
-        padding: 0 18px;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        border: 0;
-        border-radius: 999px;
-        font-weight: 700;
-        font-family: inherit;
-        cursor: default;
-      }
-
-      .sample-button.small { min-height: 44px; font-size: 13px; }
-      .sample-button.medium { min-height: 56px; font-size: 14px; }
-      .sample-button.large { min-height: 68px; font-size: 16px; }
-      .sample-button.icon { width: 52px; padding: 0; }
-
-      .sample-button.primary { background: var(--primary); color: var(--text-inverse); }
-      .sample-button.primary-soft { background: var(--primary-light); color: var(--primary); }
-      .sample-button.success { background: var(--success); color: var(--text-inverse); }
-      .sample-button.warn { background: var(--warn); color: var(--text-inverse); }
-      .sample-button.side { background: #eceff3; color: var(--text-soft); }
-      .sample-button.main { background: transparent; color: var(--text); border: 1px dashed var(--divider); }
-      .sample-button.disabled { background: var(--disabled-bg); color: var(--disabled-text); }
-
-      .group {
-        display: inline-flex;
-        border: 1px solid var(--divider);
-        border-radius: 999px;
-        overflow: hidden;
-      }
-
-      .group .sample-button {
-        border-radius: 0;
-      }
-
-      .group .sample-button + .sample-button {
-        border-left: 1px solid var(--divider);
-      }
-
-      .mini-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: var(--space-4);
-        min-height: 92px;
-        padding: 18px 22px;
-        border-radius: 22px;
-        background: var(--surface);
-        border: 1px solid var(--divider);
-      }
-
-      .mini-header-side {
-        display: flex;
-        align-items: center;
-        gap: 14px;
-      }
-
-      .icon-badge {
-        width: 42px;
-        height: 42px;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 12px;
-        background: var(--primary-lightest);
-        color: var(--primary);
-        font-weight: 700;
-      }
-
-      .title-stack {
-        display: flex;
-        flex-direction: column;
-        gap: 4px;
-      }
-
-      .title-stack strong {
-        line-height: 1;
-      }
-
-      .title-stack span {
-        font-size: var(--font-sm);
-        color: var(--text-soft);
-      }
-
-      .status-pill {
-        display: inline-flex;
-        align-items: center;
-        min-height: 36px;
-        padding: 0 14px;
-        border-radius: 999px;
-        background: var(--success-lightest);
-        color: var(--success);
-        font-size: var(--font-sm);
-        font-weight: 700;
-      }
-
-      .flow-demo {
-        display: grid;
-        gap: var(--space-3);
-      }
-
-      .flow-block {
-        min-height: 72px;
-        padding: 18px 20px;
-        border-radius: 18px;
-        border: 1px solid var(--divider);
-        display: flex;
-        align-items: center;
-        background: var(--surface);
-      }
-
-      .flow-block.header { background: #f3f5ff; }
-      .flow-block.welcome { background: #ffffff; }
-      .flow-block.search { background: #ffffff; }
-      .flow-block.helper { background: #fafbfc; }
-      .flow-block.content { background: #ffffff; min-height: 180px; }
-      .flow-block.actions { background: #f8fafc; }
-      .flow-block.filter { background: #f8f9ff; }
-
-      .search-shell {
-        display: grid;
-        gap: var(--space-3);
-      }
-
-      .search-bar {
-        min-height: 78px;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        border-radius: 999px;
-        background: var(--surface);
-        border: 1px solid var(--divider);
-        padding: 0 20px;
-      }
-
-      .search-bar input,
-      .field input,
-      .field select {
-        width: 100%;
-        border: 0;
-        outline: none;
-        background: transparent;
-        font-family: inherit;
-        font-size: var(--font-md);
-        color: var(--text);
-      }
-
-      .field-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: var(--space-3);
-      }
-
-      .field {
-        display: grid;
-        gap: 8px;
-      }
-
-      .field label {
-        font-size: var(--font-sm);
-        color: var(--text-soft);
-        font-weight: 700;
-      }
-
-      .field-box {
-        min-height: 64px;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        padding: 0 18px;
-        border-radius: 18px;
-        background: var(--surface);
-        border: 1px solid var(--divider);
-      }
-
-      .field-box.focus {
-        border-color: var(--primary);
-        box-shadow: 0 0 0 4px rgba(26, 35, 126, 0.08);
-      }
-
-      .field-box.error {
-        border-color: #d64a58;
-        background: #fff6f7;
-      }
-
-      .field-box.disabled {
-        opacity: 0.58;
-      }
-
-      .toast-stack {
-        display: grid;
-        gap: var(--space-3);
-      }
-
-      .toast {
-        min-height: 54px;
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        padding: 0 16px;
-        border-radius: 16px;
-        font-weight: 700;
-      }
-
-      .toast.success {
-        background: var(--success-lightest);
-        color: var(--success);
-      }
-
-      .toast.error {
-        background: var(--warn-lightest);
-        color: var(--warn);
-      }
-
-      .toast.info {
-        background: #fff9e2;
-        color: var(--orange);
-      }
-
-      .progress-stack {
-        display: grid;
-        gap: var(--space-4);
-      }
-
-      .progress-item {
-        display: grid;
-        gap: 10px;
-      }
-
-      .progress-label {
-        display: flex;
-        justify-content: space-between;
-        font-weight: 700;
-        font-size: var(--font-sm);
-      }
-
-      .track {
-        height: 18px;
-        border-radius: 999px;
-        background: rgba(0, 0, 0, 0.12);
-        overflow: hidden;
-      }
-
-      .fill {
-        height: 100%;
-        border-radius: 999px;
-      }
-
-      .fill.good { width: 86%; background: var(--success); }
-      .fill.regular { width: 63%; background: var(--amber); }
-      .fill.bad { width: 34%; background: var(--orange); }
-      .fill.warn { width: 18%; background: #f44336; }
-
-      .data-card-demo {
-        display: flex;
-        align-items: center;
-        gap: var(--space-4);
-        padding: 20px;
-        border-radius: 26px;
-        border: 1px solid var(--divider);
-        background: var(--surface);
-      }
-
-      .data-card-demo.primary { background: var(--primary-lightest); }
-      .data-card-demo.success { background: var(--success-lightest); }
-      .data-card-demo.warn { background: var(--warn-lightest); }
-
-      .divider-y {
-        width: 1px;
-        align-self: stretch;
-        background: var(--divider);
-      }
-
-      .metrics {
-        display: flex;
-        justify-content: space-between;
-        gap: var(--space-4);
-        flex: 1;
-        flex-wrap: wrap;
-      }
-
-      .metric {
-        display: grid;
-        gap: 4px;
-      }
-
-      .metric small {
-        color: var(--text-soft);
-      }
-
-      .metric strong {
-        font-size: 24px;
-        line-height: 1;
+      .hero {
+        padding: var(--space-6);
       }
 
       .tiles {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: var(--space-4);
+        grid-template-columns: 1fr;
       }
-
-      .tile {
-        min-height: 190px;
-        padding: 24px;
-        border-radius: 30px;
-        color: var(--text-inverse);
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        box-shadow: var(--shadow);
-      }
-
-      .tile.blue { background: linear-gradient(135deg, var(--primary-dark), var(--primary-medium)); }
-      .tile.teal { background: linear-gradient(135deg, var(--teal-dark), var(--teal-light)); }
-      .tile.grey { background: linear-gradient(135deg, var(--blue-grey-dark), var(--blue-grey-light)); }
-
-      .tile-mark {
-        width: 68px;
-        height: 68px;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 22px;
-        background: rgba(255, 255, 255, 0.14);
-        font-size: 22px;
-        font-weight: 700;
-      }
-
-      .tile strong {
-        font-size: 24px;
-        line-height: 1.1;
-      }
-
-      .table {
-        width: 100%;
-        border-collapse: collapse;
-        background: var(--surface);
-        border-radius: 18px;
-        overflow: hidden;
-      }
-
-      .table th,
-      .table td {
-        padding: 14px 16px;
-        text-align: left;
-        border-bottom: 1px solid var(--divider);
-        vertical-align: top;
-      }
-
-      .table th {
-        background: var(--surface-soft);
-        font-size: var(--font-sm);
-      }
-
-      .table code,
-      .info-item code,
-      .section code {
-        font-family: var(--mono);
-        font-size: 12px;
-        background: #f2f4f8;
-        padding: 2px 6px;
-        border-radius: 8px;
-      }
-
-      .footer {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: var(--space-8);
-        padding: var(--space-5);
-        border-radius: var(--radius-lg);
-        background: var(--primary-dark);
-        color: var(--text-inverse);
-      }
-
-      .footer p {
-        margin: 0;
-        line-height: 1.75;
-      }
-
-      @media (max-width: 1120px) {
-        .app-shell {
-          grid-template-columns: 1fr;
-        }
-
-        .grid.pattern {
-          grid-template-columns: 1fr;
-        }
-      }
-
-      @media (max-width: 760px) {
-        .content {
-          padding: var(--space-5);
-        }
-
-        .hero {
-          padding: var(--space-6);
-        }
-
-        .tiles {
-          grid-template-columns: 1fr;
-        }
-      }
-       .ds-report-section {
-    --bg: #0f172a;
-    --panel: #111827;
-    --line: rgba(255,255,255,0.08);
-    --text: #e5e7eb;
-    --muted: #94a3b8;
-    --primary: #60a5fa;
-    --danger: #f87171;
-    --warning: #fbbf24;
-    --success: #34d399;
-    --info: #38bdf8;
-
-    padding: 32px;
-    border-radius: 24px;
-    background:
-      radial-gradient(circle at top right, rgba(96,165,250,0.16), transparent 28%),
-      radial-gradient(circle at bottom left, rgba(52,211,153,0.10), transparent 30%),
-      linear-gradient(180deg, #0f172a 0%, #111827 100%);
-    color: var(--text);
-    border: 1px solid var(--line);
-  }
-
-  .ds-report-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 24px;
-    margin-bottom: 24px;
-    flex-wrap: wrap;
-  }
-
-  .ds-report-eyebrow {
-    display: inline-block;
-    margin-bottom: 10px;
-    font-size: 12px;
-    letter-spacing: 0.14em;
-    font-weight: 700;
-    color: var(--primary);
-  }
-
-  .ds-report-header h2 {
-    margin: 0 0 8px;
-    font-size: 32px;
-    line-height: 1.1;
-  }
-
-  .ds-report-header p {
-    margin: 0;
-    max-width: 760px;
-    color: var(--muted);
-    line-height: 1.6;
-  }
-
-  .ds-report-pill {
-    padding: 10px 14px;
-    border-radius: 999px;
-    background: rgba(255,255,255,0.06);
-    border: 1px solid var(--line);
-    color: #cbd5e1;
-    font-size: 13px;
-    font-weight: 600;
-    white-space: nowrap;
-  }
-
-  .ds-hero-grid {
-    display: grid;
-    grid-template-columns: 1.35fr 1fr 1fr 1fr;
-    gap: 16px;
-    margin-bottom: 16px;
-  }
-
-  .ds-hero-card {
-    padding: 20px;
-    border-radius: 20px;
-    background: rgba(255,255,255,0.04);
-    border: 1px solid var(--line);
-  }
-
-  .ds-hero-card.main {
-    background:
-      radial-gradient(circle at top right, rgba(52,211,153,0.18), transparent 35%),
-      rgba(255,255,255,0.05);
-  }
-
-  .ds-card-label {
-    display: inline-block;
-    margin-bottom: 10px;
-    font-size: 12px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--muted);
-  }
-
-  .ds-hero-number {
-    display: block;
-    font-size: 56px;
-    line-height: 1;
-    margin-bottom: 8px;
-  }
-
-  .ds-card-number {
-    display: block;
-    font-size: 32px;
-    line-height: 1;
-    margin-bottom: 8px;
-  }
-
-  .ds-hero-card p {
-    margin: 0;
-    color: var(--muted);
-    line-height: 1.5;
-    font-size: 14px;
-  }
-
-  .ds-mini-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
-    margin-bottom: 20px;
-  }
-
-  .ds-mini-card {
-    padding: 16px 18px;
-    border-radius: 18px;
-    border: 1px solid var(--line);
-    background: rgba(255,255,255,0.035);
-  }
-
-  .ds-mini-card span {
-    display: block;
-    margin-bottom: 8px;
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--muted);
-  }
-
-  .ds-mini-card strong {
-    font-size: 28px;
-    line-height: 1;
-  }
-
-  .ds-mini-card.danger { box-shadow: inset 0 0 0 1px rgba(248,113,113,0.18); }
-  .ds-mini-card.success { box-shadow: inset 0 0 0 1px rgba(52,211,153,0.18); }
-  .ds-mini-card.info { box-shadow: inset 0 0 0 1px rgba(56,189,248,0.18); }
-  .ds-mini-card.warning { box-shadow: inset 0 0 0 1px rgba(251,191,36,0.18); }
-
-  .ds-report-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-  }
-
-  .ds-report-grid.secondary {
-    margin-top: 20px;
-  }
-
-  .ds-report-panel {
-    background: rgba(255,255,255,0.035);
-    border: 1px solid var(--line);
-    border-radius: 20px;
-    padding: 22px;
-  }
-
-  .ds-panel-head {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    margin-bottom: 18px;
-    flex-wrap: wrap;
-  }
-
-  .ds-panel-head h3 {
-    margin: 0;
-    font-size: 18px;
-  }
-
-  .ds-panel-head span {
-    font-size: 12px;
-    color: var(--muted);
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-  }
-
-  .ds-impact-list {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-  }
-
-  .ds-impact-item {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .ds-impact-row {
-    display: flex;
-    justify-content: space-between;
-    gap: 12px;
-    align-items: center;
-    font-size: 14px;
-  }
-
-  .ds-impact-row span {
-    color: #dbe4f0;
-    word-break: break-word;
-  }
-
-  .ds-impact-row strong {
-    color: #fff;
-    font-size: 13px;
-  }
-
-  .ds-bar {
-    width: 100%;
-    height: 10px;
-    border-radius: 999px;
-    background: rgba(255,255,255,0.08);
-    overflow: hidden;
-  }
-
-  .ds-bar i {
-    display: block;
-    height: 100%;
-    border-radius: inherit;
-    background: linear-gradient(90deg, #60a5fa 0%, #34d399 100%);
-  }
-
-  .ds-bar.danger i {
-    background: linear-gradient(90deg, #f87171 0%, #fb7185 100%);
-  }
-
-  .ds-bar.success i {
-    background: linear-gradient(90deg, #34d399 0%, #60a5fa 100%);
-  }
-
-  .ds-insight-box,
-  .ds-note-box {
-    padding: 16px;
-    border-radius: 16px;
-    margin-bottom: 16px;
-  }
-
-  .ds-insight-box {
-    background: rgba(96,165,250,0.08);
-    border: 1px solid rgba(96,165,250,0.18);
-  }
-
-  .ds-note-box {
-    background: rgba(52,211,153,0.08);
-    border: 1px solid rgba(52,211,153,0.18);
-  }
-
-  .ds-insight-box p,
-  .ds-note-box p {
-    margin: 0;
-    color: #dbeafe;
-    line-height: 1.6;
-    font-size: 14px;
-  }
-
-  .ds-note-box strong {
-    display: block;
-    margin-bottom: 8px;
-    color: #a7f3d0;
-    font-size: 14px;
-  }
-
-  .ds-insight-list {
-    margin: 0;
-    padding-left: 18px;
-  }
-
-  .ds-insight-list li {
-    margin-bottom: 10px;
-    color: #cbd5e1;
-    line-height: 1.55;
-    font-size: 14px;
-  }
-
-  @media (max-width: 1100px) {
-    .ds-hero-grid,
-    .ds-mini-grid,
-    .ds-report-grid,
-    .ds-report-grid.secondary {
-      grid-template-columns: 1fr 1fr;
     }
 
-    .ds-hero-card.main {
-      grid-column: span 2;
-    }
-  }
-
-  @media (max-width: 720px) {
     .ds-report-section {
-      padding: 20px;
-      border-radius: 18px;
+      --bg: #0f172a;
+      --panel: #111827;
+      --line: rgba(255, 255, 255, 0.08);
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+      --primary: #60a5fa;
+      --danger: #f87171;
+      --warning: #fbbf24;
+      --success: #34d399;
+      --info: #38bdf8;
+
+      padding: 32px;
+      border-radius: 24px;
+      background:
+        radial-gradient(circle at top right, rgba(96, 165, 250, 0.16), transparent 28%),
+        radial-gradient(circle at bottom left, rgba(52, 211, 153, 0.10), transparent 30%),
+        linear-gradient(180deg, #0f172a 0%, #111827 100%);
+      color: var(--text);
+      border: 1px solid var(--line);
+    }
+
+    .ds-report-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 24px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+
+    .ds-report-eyebrow {
+      display: inline-block;
+      margin-bottom: 10px;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      font-weight: 700;
+      color: var(--primary);
     }
 
     .ds-report-header h2 {
-      font-size: 24px;
+      margin: 0 0 8px;
+      font-size: 32px;
+      line-height: 1.1;
     }
 
-    .ds-hero-grid,
-    .ds-mini-grid,
-    .ds-report-grid,
-    .ds-report-grid.secondary {
-      grid-template-columns: 1fr;
+    .ds-report-header p {
+      margin: 0;
+      max-width: 760px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .ds-report-pill {
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--line);
+      color: #cbd5e1;
+      font-size: 13px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .ds-hero-grid {
+      display: grid;
+      grid-template-columns: 1.35fr 1fr 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .ds-hero-card {
+      padding: 20px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--line);
     }
 
     .ds-hero-card.main {
-      grid-column: auto;
+      background:
+        radial-gradient(circle at top right, rgba(52, 211, 153, 0.18), transparent 35%),
+        rgba(255, 255, 255, 0.05);
+    }
+
+    .ds-card-label {
+      display: inline-block;
+      margin-bottom: 10px;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
     }
 
     .ds-hero-number {
-      font-size: 42px;
+      display: block;
+      font-size: 56px;
+      line-height: 1;
+      margin-bottom: 8px;
     }
-  }
-    </style>
-  </head>
-  <body>
-    <div class="app-shell">
-      <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Abrir navegación">
-  ☰
-</button>
 
-<div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+    .ds-card-number {
+      display: block;
+      font-size: 32px;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
 
-<aside class="sidebar" id="mobileSidebar">
-  <button class="mobile-nav-close" id="mobileNavClose" aria-label="Cerrar navegación">
-    ✕
-  </button>
+    .ds-hero-card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.5;
+      font-size: 14px;
+    }
 
-  <div class="brand">
-    <h1>Agrostock DS</h1>
-    <p>
-      Design System V1, documentacion base para Ionic y Angular, con escala DVH,
-      variante admin, uso mandatorio de app-button y reglas reales de template.
-    </p>
-  </div>
+    .ds-mini-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-bottom: 20px;
+    }
 
-  <div class="nav-group">
-    <div class="nav-title">Foundation</div>
-    <ul class="nav-list">
-      <li><a href="#contexto">Contexto real</a></li>
-      <li><a href="#foundation">Foundation V1</a></li>
-      <li><a href="#admin">Variante admin</a></li>
-    </ul>
-  </div>
+    .ds-mini-card {
+      padding: 16px 18px;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.035);
+    }
 
-  <div class="nav-group">
-    <div class="nav-title">Reglas base</div>
-    <ul class="nav-list">
-      <li><a href="#icons">SVG icons</a></li>
-      <li><a href="#clicks">app-button</a></li>
-      <li><a href="#welcome">Welcome</a></li>
-      <li><a href="#search">Search singleton</a></li>
-    </ul>
-  </div>
+    .ds-mini-card span {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+    }
 
-  <div class="nav-group">
-    <div class="nav-title">Estructura</div>
-    <ul class="nav-list">
-      <li><a href="#header">Header real</a></li>
-      <li><a href="#layout">Layout</a></li>
-      <li><a href="#helper">Helper y actions</a></li>
-    </ul>
-  </div>
+    .ds-mini-card strong {
+      font-size: 28px;
+      line-height: 1;
+    }
 
-  <div class="nav-group">
-    <div class="nav-title">Componentes</div>
-    <ul class="nav-list">
-      <li><a href="#inputs">Inputs</a></li>
-      <li><a href="#buttons">Buttons</a></li>
-      <li><a href="#feedback">Feedback</a></li>
-      <li><a href="#cards">Data card</a></li>
-      <li><a href="#grid-menu">Grid menu</a></li>
-    </ul>
-  </div>
+    .ds-mini-card.danger {
+      box-shadow: inset 0 0 0 1px rgba(248, 113, 113, 0.18);
+    }
 
-  <div class="nav-group">
-    <div class="nav-title">Templates reales</div>
-    <ul class="nav-list">
-      <li><a href="#template-welcome-search">Welcome + search</a></li>
-      <li><a href="#template-main-no-filter">Main sin filter</a></li>
-      <li><a href="#template-main-filter">Main con filter</a></li>
-      <li><a href="#rules">Reglas finales</a></li>
-       <li><a href="#proyectStats">Estadísticas de Implementación</a></li>
-    </ul>
-  </div>
-</aside>
+    .ds-mini-card.success {
+      box-shadow: inset 0 0 0 1px rgba(52, 211, 153, 0.18);
+    }
 
-      <main class="content">
-        <section class="hero" id="contexto">
-          <h2>Agrostock Design System V1</h2>
+    .ds-mini-card.info {
+      box-shadow: inset 0 0 0 1px rgba(56, 189, 248, 0.18);
+    }
+
+    .ds-mini-card.warning {
+      box-shadow: inset 0 0 0 1px rgba(251, 191, 36, 0.18);
+    }
+
+    .ds-report-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .ds-report-grid.secondary {
+      margin-top: 20px;
+    }
+
+    .ds-report-panel {
+      background: rgba(255, 255, 255, 0.035);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 22px;
+    }
+
+    .ds-panel-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+    }
+
+    .ds-panel-head h3 {
+      margin: 0;
+      font-size: 18px;
+    }
+
+    .ds-panel-head span {
+      font-size: 12px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .ds-impact-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .ds-impact-item {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .ds-impact-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: center;
+      font-size: 14px;
+    }
+
+    .ds-impact-row span {
+      color: #dbe4f0;
+      word-break: break-word;
+    }
+
+    .ds-impact-row strong {
+      color: #fff;
+      font-size: 13px;
+    }
+
+    .ds-bar {
+      width: 100%;
+      height: 10px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.08);
+      overflow: hidden;
+    }
+
+    .ds-bar i {
+      display: block;
+      height: 100%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, #60a5fa 0%, #34d399 100%);
+    }
+
+    .ds-bar.danger i {
+      background: linear-gradient(90deg, #f87171 0%, #fb7185 100%);
+    }
+
+    .ds-bar.success i {
+      background: linear-gradient(90deg, #34d399 0%, #60a5fa 100%);
+    }
+
+    .ds-insight-box,
+    .ds-note-box {
+      padding: 16px;
+      border-radius: 16px;
+      margin-bottom: 16px;
+    }
+
+    .ds-insight-box {
+      background: rgba(96, 165, 250, 0.08);
+      border: 1px solid rgba(96, 165, 250, 0.18);
+    }
+
+    .ds-note-box {
+      background: rgba(52, 211, 153, 0.08);
+      border: 1px solid rgba(52, 211, 153, 0.18);
+    }
+
+    .ds-insight-box p,
+    .ds-note-box p {
+      margin: 0;
+      color: #dbeafe;
+      line-height: 1.6;
+      font-size: 14px;
+    }
+
+    .ds-note-box strong {
+      display: block;
+      margin-bottom: 8px;
+      color: #a7f3d0;
+      font-size: 14px;
+    }
+
+    .ds-insight-list {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    .ds-insight-list li {
+      margin-bottom: 10px;
+      color: #cbd5e1;
+      line-height: 1.55;
+      font-size: 14px;
+    }
+
+    @media (max-width: 1100px) {
+
+      .ds-hero-grid,
+      .ds-mini-grid,
+      .ds-report-grid,
+      .ds-report-grid.secondary {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .ds-hero-card.main {
+        grid-column: span 2;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .ds-report-section {
+        padding: 20px;
+        border-radius: 18px;
+      }
+
+      .ds-report-header h2 {
+        font-size: 24px;
+      }
+
+      .ds-hero-grid,
+      .ds-mini-grid,
+      .ds-report-grid,
+      .ds-report-grid.secondary {
+        grid-template-columns: 1fr;
+      }
+
+      .ds-hero-card.main {
+        grid-column: auto;
+      }
+
+      .ds-hero-number {
+        font-size: 42px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="app-shell">
+    <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Abrir navegación">
+      ☰
+    </button>
+
+    <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+
+    <aside class="sidebar" id="mobileSidebar">
+      <button class="mobile-nav-close" id="mobileNavClose" aria-label="Cerrar navegación">
+        ✕
+      </button>
+
+      <div class="brand">
+        <h1>Agrostock DS</h1>
+        <p>
+          Design System V1, documentacion base para Ionic y Angular, con escala DVH,
+          variante admin, uso mandatorio de app-button y reglas reales de template.
+        </p>
+      </div>
+
+      <div class="nav-group">
+        <div class="nav-title">Foundation</div>
+        <ul class="nav-list">
+          <li><a href="#contexto">Contexto real</a></li>
+          <li><a href="#foundation">Foundation V1</a></li>
+          <li><a href="#admin">Variante admin</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-group">
+        <div class="nav-title">Reglas base</div>
+        <ul class="nav-list">
+          <li><a href="#icons">SVG icons</a></li>
+          <li><a href="#clicks">app-button</a></li>
+          <li><a href="#welcome">Welcome</a></li>
+          <li><a href="#search">Search singleton</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-group">
+        <div class="nav-title">Estructura</div>
+        <ul class="nav-list">
+          <li><a href="#header">Header real</a></li>
+          <li><a href="#layout">Layout</a></li>
+          <li><a href="#helper">Helper y actions</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-group">
+        <div class="nav-title">Componentes</div>
+        <ul class="nav-list">
+          <li><a href="#inputs">Inputs</a></li>
+          <li><a href="#buttons">Buttons</a></li>
+          <li><a href="#feedback">Feedback</a></li>
+          <li><a href="#cards">Data card</a></li>
+          <li><a href="#grid-menu">Grid menu</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-group">
+        <div class="nav-title">Templates reales</div>
+        <ul class="nav-list">
+          <li><a href="#template-welcome-search">Welcome + search</a></li>
+          <li><a href="#template-main-no-filter">Main sin filter</a></li>
+          <li><a href="#template-main-filter">Main con filter</a></li>
+          <li><a href="#rules">Reglas finales</a></li>
+          <li><a href="#proyectStats">Estadísticas de Implementación</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="content">
+      <section class="hero" id="contexto">
+        <h2>Agrostock Design System V1</h2>
+        <p>
+          Esta documentacion ya no describe una UI web generica. Describe una plataforma
+          real construida en Ionic y Angular, con una grilla dinamica no mobile para esta
+          V1, una base de dimensionamiento por DVH, una variante admin con escala reducida
+          y una regla fuerte de composicion por componente. El sistema parte de templates
+          reales y de restricciones concretas, no de teoria abstracta.
+        </p>
+      </section>
+
+      <section class="section" id="foundation">
+        <div class="section-header">
+          <span class="eyebrow">Foundation</span>
+          <h3>Premisas estructurales del sistema</h3>
           <p>
-            Esta documentacion ya no describe una UI web generica. Describe una plataforma
-            real construida en Ionic y Angular, con una grilla dinamica no mobile para esta
-            V1, una base de dimensionamiento por DVH, una variante admin con escala reducida
-            y una regla fuerte de composicion por componente. El sistema parte de templates
-            reales y de restricciones concretas, no de teoria abstracta.
+            La UI se organiza sobre tokens calculados, una unidad base de altura visible y
+            wrappers reales del ecosistema Ionic. Esto condiciona directamente el mapeo de
+            componentes y el modo de documentarlos.
           </p>
-        </section>
+        </div>
 
-        <section class="section" id="foundation">
-          <div class="section-header">
-            <span class="eyebrow">Foundation</span>
-            <h3>Premisas estructurales del sistema</h3>
+        <div class="grid cards">
+          <article class="card pad">
+            <h4>Ionic y Angular</h4>
             <p>
-              La UI se organiza sobre tokens calculados, una unidad base de altura visible y
-              wrappers reales del ecosistema Ionic. Esto condiciona directamente el mapeo de
-              componentes y el modo de documentarlos.
+              La documentacion debe reflejar componentes reales como <code>app-header</code>,
+              <code>ion-content</code>, <code>ion-item</code>, <code>ion-input</code>,
+              <code>ion-select</code>, <code>app-button</code>, <code>app-filter-panel</code>
+              y <code>app-spinners</code>.
             </p>
-          </div>
+          </article>
 
-          <div class="grid cards">
-            <article class="card pad">
-              <h4>Ionic y Angular</h4>
-              <p>
-                La documentacion debe reflejar componentes reales como <code>app-header</code>,
-                <code>ion-content</code>, <code>ion-item</code>, <code>ion-input</code>,
-                <code>ion-select</code>, <code>app-button</code>, <code>app-filter-panel</code>
-                y <code>app-spinners</code>.
+          <article class="card pad">
+            <h4>DVH como base</h4>
+            <p>
+              <code>--ux_base_unit: 1dvh;</code> gobierna alturas, radios, gaps, paddings,
+              fuentes y escalas visuales. Esto no es un detalle tecnico menor, es la base
+              de la densidad del sistema.
+            </p>
+          </article>
+
+          <article class="card pad">
+            <h4>Escala global</h4>
+            <p>
+              <code>--ux_ui_scale</code> define el peso visual de toda la interfaz. La
+              documentacion debe asumir que un mismo bloque puede verse distinto segun el
+              contexto sin cambiar su semantica.
+            </p>
+          </article>
+
+          <article class="card pad">
+            <h4>Templates diagnosticados</h4>
+            <p>
+              Los patrones del DS se construyen desde plantillas reales de pantalla,
+              especialmente flujos con <code>welcome</code>, búsqueda, helper, filtros,
+              loaders, empty states y acciones.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="admin">
+        <div class="section-header">
+          <span class="eyebrow">Variante</span>
+          <h3>Admin no es otro sistema, es la misma semántica a otra escala</h3>
+          <p>
+            La seccion admin reduce la escala de interfaz, pero no cambia la logica de
+            composicion. El mismo componente debe conservar su rol, aunque se compacte.
+          </p>
+        </div>
+
+        <div class="grid pattern">
+          <article class="card">
+            <div class="card-header">
+              <h4>Regla base</h4>
+              <span>app-admin-layout</span>
+            </div>
+            <div class="card-body">
+              <div class="code">app-admin-layout {
+                --ux_ui_scale: 0.85 !important;
+                --ux_base_unit: 1dvh !important;
+
+                @extend :root;
+                }</div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-header">
+              <h4>Impacto real</h4>
+              <span>Densidad</span>
+            </div>
+            <div class="card-body">
+              <div class="info-list">
+                <div class="info-item">
+                  <strong>Mas informacion visible</strong>
+                  en la misma altura.
+                </div>
+                <div class="info-item">
+                  <strong>Menor tolerancia a textos largos</strong>
+                  dentro de acciones, cards y helper.
+                </div>
+                <div class="info-item">
+                  <strong>Mayor importancia del orden</strong>
+                  entre helper, contenido y acciones.
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="icons">
+        <div class="section-header">
+          <span class="eyebrow">Regla mandatoria</span>
+          <h3>SVG icons con fill igual a currentColor</h3>
+          <p>
+            Todo icono SVG usado por el sistema debe permitir heredar color desde CSS. Eso
+            vuelve consistente el uso de estados, temas, hover y clases semánticas como
+            <code>text-main</code>, <code>text-side</code>, <code>text-primary</code>,
+            <code>text-success</code> y <code>text-warn</code>.
+          </p>
+        </div>
+
+        <div class="grid pattern">
+          <article class="card">
+            <div class="card-header">
+              <h4>Regla correcta</h4>
+              <span>SVG base</span>
+            </div>
+            <div class="card-body">
+              <div class="code">&lt;svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                &gt;
+                &lt;path d="..." /&gt;
+                &lt;/svg&gt;</div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-header">
+              <h4>No permitido</h4>
+              <span>Rompe semantica visual</span>
+            </div>
+            <div class="card-body">
+              <div class="code">&lt;svg fill="#1a237e"&gt;...&lt;/svg&gt;
+                &lt;svg fill="#000000"&gt;...&lt;/svg&gt;
+                &lt;path fill="red" d="..." /&gt;</div>
+              <p style="margin:16px 0 0; color:var(--text-soft); line-height:1.75;">
+                Cuando el SVG trae color duro, deja de responder a clases del sistema y
+                rompe la lógica cromática del componente.
               </p>
-            </article>
+            </div>
+          </article>
+        </div>
+      </section>
 
-            <article class="card pad">
-              <h4>DVH como base</h4>
-              <p>
-                <code>--ux_base_unit: 1dvh;</code> gobierna alturas, radios, gaps, paddings,
-                fuentes y escalas visuales. Esto no es un detalle tecnico menor, es la base
-                de la densidad del sistema.
-              </p>
-            </article>
+      <section class="section" id="clicks">
+        <div class="section-header">
+          <span class="eyebrow">Regla mandatoria</span>
+          <h3>app-button como único elemento de click</h3>
+          <p>
+            Dentro del sistema, todo elemento accionable debe resolverse mediante
+            <code>&lt;app-button&gt;</code>. Esto incluye acciones primarias, icon actions,
+            suffix actions, paginación, filtros, toggles operativos y accesos que visualmente
+            parezcan botones.
+          </p>
+        </div>
 
-            <article class="card pad">
-              <h4>Escala global</h4>
-              <p>
-                <code>--ux_ui_scale</code> define el peso visual de toda la interfaz. La
-                documentacion debe asumir que un mismo bloque puede verse distinto segun el
-                contexto sin cambiar su semantica.
-              </p>
-            </article>
-
-            <article class="card pad">
-              <h4>Templates diagnosticados</h4>
-              <p>
-                Los patrones del DS se construyen desde plantillas reales de pantalla,
-                especialmente flujos con <code>welcome</code>, búsqueda, helper, filtros,
-                loaders, empty states y acciones.
-              </p>
-            </article>
-          </div>
-        </section>
-
-        <section class="section" id="admin">
-          <div class="section-header">
-            <span class="eyebrow">Variante</span>
-            <h3>Admin no es otro sistema, es la misma semántica a otra escala</h3>
-            <p>
-              La seccion admin reduce la escala de interfaz, pero no cambia la logica de
-              composicion. El mismo componente debe conservar su rol, aunque se compacte.
-            </p>
-          </div>
-
-          <div class="grid pattern">
-            <article class="card">
-              <div class="card-header">
-                <h4>Regla base</h4>
-                <span>app-admin-layout</span>
+        <div class="grid pattern">
+          <article class="card">
+            <div class="card-header">
+              <h4>Regla de uso</h4>
+              <span>Click centralizado</span>
+            </div>
+            <div class="card-body">
+              <div class="info-list">
+                <div class="info-item">
+                  <strong>Usar</strong>
+                  <code>app-button</code> para toda acción del usuario.
+                </div>
+                <div class="info-item">
+                  <strong>Evitar</strong>
+                  <code>button</code>, <code>a</code>, <code>div</code> clickable o
+                  <code>ion-button</code> directo como interfaz final de interacción.
+                </div>
+                <div class="info-item">
+                  <strong>Beneficio</strong>
+                  una sola capa de semántica, estilos, estados disabled, ids de testing y
+                  manejo de icono y texto.
+                </div>
               </div>
-              <div class="card-body">
-                <div class="code">app-admin-layout {
-  --ux_ui_scale: 0.85 !important;
-  --ux_base_unit: 1dvh !important;
+            </div>
+          </article>
 
-  @extend :root;
-}</div>
-              </div>
-            </article>
+          <article class="card">
+            <div class="card-header">
+              <h4>Ejemplo real</h4>
+              <span>Suffix button</span>
+            </div>
+            <div class="card-body">
+              <div class="code">&lt;app-button
+                class="suffix"
+                *ngIf="spreadsheetQuota.controls.quota.value &amp;&amp; spreadsheetQuota.controls.quota.value.length
+                &gt; 0"
+                [btnId]="'spreadsheetQuotaClearBtn'"
+                [btnClass]="'ion-btn icon suffix main'"
+                [btnIcon]="globalImages.ux_close"
+                (clicked)="clearInput()"
+                &gt;&lt;/app-button&gt;</div>
+            </div>
+          </article>
+        </div>
+      </section>
 
-            <article class="card">
-              <div class="card-header">
-                <h4>Impacto real</h4>
-                <span>Densidad</span>
+      <section class="section" id="welcome">
+        <div class="section-header">
+          <span class="eyebrow">Patrón clave</span>
+          <h3>Welcome como chapa informativa de sección</h3>
+          <p>
+            En Agrostock, <code>.welcome</code> no es solo empty state. También funciona como
+            chapa inicial de contexto de módulo o de tarea. Puede convivir con búsqueda,
+            loaders y estados sin contenido. Su valor real es introducir la acción que sigue.
+          </p>
+        </div>
+
+        <div class="grid pattern">
+          <article class="card">
+            <div class="card-header">
+              <h4>Rol funcional</h4>
+              <span>No es decorativo</span>
+            </div>
+            <div class="card-body">
+              <div class="info-list">
+                <div class="info-item">
+                  <strong>Contexto de sección</strong>
+                  explica qué acción va a realizar el usuario.
+                </div>
+                <div class="info-item">
+                  <strong>Entrada calmada</strong>
+                  reduce brusquedad en pantallas centradas con una sola tarea.
+                </div>
+                <div class="info-item">
+                  <strong>Empty state reutilizable</strong>
+                  también puede usarse cuando no hay resultados.
+                </div>
               </div>
-              <div class="card-body">
-                <div class="info-list">
-                  <div class="info-item">
-                    <strong>Mas informacion visible</strong>
-                    en la misma altura.
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-header">
+              <h4>Estructura</h4>
+              <span>Base real</span>
+            </div>
+            <div class="card-body">
+              <div class="code">&lt;div class="welcome"&gt;
+                &lt;ion-icon class="big-icon text-main" [src]="globalImages.ux_reception"&gt;&lt;/ion-icon&gt;
+                &lt;h1 class="main text-main"&gt;{{globalTexts.loadTruck}}&lt;/h1&gt;
+                &lt;p class="side text-side"&gt;{{globalTexts.QuotaNumberandZone}}&lt;/p&gt;
+                &lt;/div&gt;</div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="search">
+        <div class="section-header">
+          <span class="eyebrow">Patrón clave</span>
+          <h3>Search bar container como addon singleton por componente</h3>
+          <p>
+            La búsqueda no se interpreta como un bloque global del sistema. Se interpreta como
+            un módulo de entrada asociado a una pantalla o componente concreto. Por eso
+            <code>.search_bar-container</code> funciona como addon singleton: aparece cuando la
+            tarea lo necesita y no compite con el resto del layout.
+          </p>
+        </div>
+
+        <div class="grid pattern">
+          <article class="card">
+            <div class="card-header">
+              <h4>Lectura correcta</h4>
+              <span>Una pantalla, una búsqueda</span>
+            </div>
+            <div class="card-body">
+              <div class="info-list">
+                <div class="info-item">
+                  <strong>Singleton visual</strong>
+                  normalmente una sola búsqueda principal por pantalla.
+                </div>
+                <div class="info-item">
+                  <strong>Acoplada al flujo</strong>
+                  puede vivir debajo de welcome o arriba de resultados.
+                </div>
+                <div class="info-item">
+                  <strong>Con acciones internas</strong>
+                  prefijo, suffix clear, submit y chips o zonas opcionales.
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-header">
+              <h4>Estructura real</h4>
+              <span>Barra con input y action</span>
+            </div>
+            <div class="card-body">
+              <div class="code">&lt;div class="search_bar"&gt;
+                &lt;div class="search_bar-input"&gt;
+                &lt;ion-input class="input"&gt;&lt;/ion-input&gt;
+                &lt;ion-icon class="prefix"&gt;&lt;/ion-icon&gt;
+                &lt;app-button class="suffix"&gt;&lt;/app-button&gt;
+                &lt;/div&gt;
+
+                &lt;div class="search_bar-actions"&gt;
+                &lt;app-button&gt;&lt;/app-button&gt;
+                &lt;/div&gt;
+                &lt;/div&gt;</div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="header">
+        <div class="section-header">
+          <span class="eyebrow">Header real</span>
+          <h3>app-header como wrapper canónico de navegación</h3>
+          <p>
+            En los templates reales, la cabecera visible no se instancia como
+            <code>ion-header</code> directo, sino como <code>app-header</code>. Eso debe quedar
+            documentado como contrato visual del sistema.
+          </p>
+        </div>
+
+        <div class="grid pattern">
+          <article class="card">
+            <div class="card-header">
+              <h4>Uso base</h4>
+              <span>Simple</span>
+            </div>
+            <div class="card-body">
+              <div class="code">&lt;app-header [titleHeader]="" [subTitleHeader]=""&gt;&lt;/app-header&gt;</div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-header">
+              <h4>Uso con condición</h4>
+              <span>Hidden por flujo</span>
+            </div>
+            <div class="card-body">
+              <div class="code">&lt;app-header
+                [titleHeader]=""
+                [subTitleHeader]=""
+                [hidden]="scanQrService.activeScan()"
+                &gt;&lt;/app-header&gt;</div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="layout">
+        <div class="section-header">
+          <span class="eyebrow">Layout</span>
+          <h3>Estructura madre de pantalla</h3>
+          <p>
+            El orden del sistema sigue siendo estable, pero ahora se documenta desde los
+            patrones reales detectados. La pantalla puede estar centrada, con resultados o con
+            filtro lateral, sin perder su jerarquía.
+          </p>
+        </div>
+
+        <div class="grid pattern">
+          <article class="card">
+            <div class="card-header">
+              <h4>Mapa visual</h4>
+              <span>Orden recomendado</span>
+            </div>
+            <div class="card-body">
+              <div class="flow-demo">
+                <div class="flow-block header">app-header</div>
+                <div class="flow-block welcome">welcome opcional como chapa o empty state</div>
+                <div class="flow-block search">search_bar-container opcional, singleton por componente</div>
+                <div class="flow-block helper">helper con resume y paginación</div>
+                <div class="flow-block content">content-view con cards, listas o resultados</div>
+                <div class="flow-block actions">main-actions con progreso y acción principal</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-header">
+              <h4>Vista con filter panel</h4>
+              <span>Page layout expandido</span>
+            </div>
+            <div class="card-body">
+              <div class="flow-demo">
+                <div class="flow-block filter">app-filter-panel dentro de page-layout.filter-open</div>
+                <div class="flow-block content">main-container con helper.w-filter, content-view y main-actions</div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="helper">
+        <div class="section-header">
+          <span class="eyebrow">Bloques operativos</span>
+          <h3>Helper, content-view y main-actions</h3>
+          <p>
+            Estos tres bloques sostienen la operativa de resultados. El helper resume, el
+            content-view contiene y el main-actions acciona. En Agrostock conviene conservar
+            esa separación incluso en pantallas chicas o centradas.
+          </p>
+        </div>
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Bloque</th>
+              <th>Variantes</th>
+              <th>Uso</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>.helper</code></td>
+              <td><code>.helper</code>, <code>.helper.w-filter</code></td>
+              <td>Resume, filters CTA, paginación, contexto de resultados</td>
+            </tr>
+            <tr>
+              <td><code>.content-view</code></td>
+              <td><code>.content-view</code>, <code>.w-actions</code>, <code>.fluid-height</code>, <code>.center</code>
+              </td>
+              <td>Contenido principal de pantalla</td>
+            </tr>
+            <tr>
+              <td><code>.main-actions</code></td>
+              <td>con o sin <code>.progress-container</code></td>
+              <td>Acción primaria, confirmación, guardado o avance</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section" id="inputs">
+        <div class="section-header">
+          <span class="eyebrow">Inputs</span>
+          <h3>ion-item.input-container y search_bar</h3>
+          <p>
+            El sistema mantiene dos canales claros de entrada. El campo formal de formulario
+            sobre <code>ion-item.input-container</code> y la búsqueda central sobre
+            <code>.search_bar</code>. Ambos deben convivir con estados visuales de Ionic.
+          </p>
+        </div>
+
+        <div class="grid pattern">
+          <article class="card">
+            <div class="card-header">
+              <h4>Estados</h4>
+              <span>Campos base</span>
+            </div>
+            <div class="card-body">
+              <div class="field-grid">
+                <div class="field">
+                  <label>Normal</label>
+                  <div class="field-box"><span>📦</span><input value="Producto" /></div>
+                </div>
+                <div class="field">
+                  <label>Con foco</label>
+                  <div class="field-box focus"><span>🏷</span><input value="Lote" /></div>
+                </div>
+                <div class="field">
+                  <label>Error</label>
+                  <div class="field-box error"><span>!</span><input value="Cantidad" /></div>
+                </div>
+                <div class="field">
+                  <label>Disabled</label>
+                  <div class="field-box disabled"><span>🔒</span><input value="Unidad" /></div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-header">
+              <h4>Mapa real</h4>
+              <span>Clases</span>
+            </div>
+            <div class="card-body">
+              <div class="info-list">
+                <div class="info-item">
+                  <strong>Formulario</strong>
+                  <code>ion-item.input-container</code>,
+                  <code>.w-prefix</code>,
+                  <code>.item-has-focus</code>,
+                  <code>.item-has-value</code>,
+                  <code>.ion-invalid.ion-touched</code>,
+                  <code>.item-interactive-disabled</code>
+                </div>
+                <div class="info-item">
+                  <strong>Búsqueda</strong>
+                  <code>.search_bar</code>,
+                  <code>.search_bar-input</code>,
+                  <code>.search_bar-actions</code>,
+                  <code>.prefix</code>,
+                  <code>.suffix</code>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="buttons">
+        <div class="section-header">
+          <span class="eyebrow">Buttons</span>
+          <h3>Variantes visuales delegadas a app-button</h3>
+          <p>
+            Aunque visualmente el sistema siga hablando en términos de
+            <code>ion-btn</code>, la instancia real de click es <code>app-button</code>.
+            El design system debe documentar ambas capas juntas.
+          </p>
+        </div>
+
+        <div class="grid pattern">
+          <article class="card">
+            <div class="card-header">
+              <h4>Preview visual</h4>
+              <span>Tamaño y semántica</span>
+            </div>
+            <div class="card-body">
+              <div class="button-row">
+                <div class="sample-button small side">small</div>
+                <div class="sample-button medium primary">medium</div>
+                <div class="sample-button large success">large</div>
+                <div class="sample-button icon primary">+</div>
+              </div>
+
+              <div style="height:16px;"></div>
+
+              <div class="button-row">
+                <div class="sample-button medium primary">primary</div>
+                <div class="sample-button medium primary-soft">primary soft</div>
+                <div class="sample-button medium success">success</div>
+                <div class="sample-button medium warn">warn</div>
+                <div class="sample-button medium side">side</div>
+                <div class="sample-button medium main">main</div>
+                <div class="sample-button medium disabled">disabled</div>
+              </div>
+
+              <div style="height:16px;"></div>
+
+              <div class="group">
+                <div class="sample-button side">Todos</div>
+                <div class="sample-button side">Ingresos</div>
+                <div class="sample-button side">Egresos</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-header">
+              <h4>Mapa técnico</h4>
+              <span>btnClass</span>
+            </div>
+            <div class="card-body">
+              <div class="info-list">
+                <div class="info-item">
+                  <strong>Tamaños</strong>
+                  <code>.x-small</code>, <code>.small</code>, <code>.medium</code>,
+                  <code>.large</code>, <code>.icon</code>, <code>.icon.large</code>,
+                  <code>.icon.suffix</code>
+                </div>
+                <div class="info-item">
+                  <strong>Intención</strong>
+                  <code>.primary</code>, <code>.primary--soft</code>,
+                  <code>.success</code>, <code>.success--soft</code>,
+                  <code>.warn</code>, <code>.warn--soft</code>,
+                  <code>.main</code>, <code>.main--primary</code>,
+                  <code>.side</code>, <code>.submit</code>, <code>.scan</code>
+                </div>
+                <div class="info-item">
+                  <strong>Grupo</strong>
+                  <code>.group_left</code>, <code>.group_middle</code>,
+                  <code>.group_right</code>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="feedback">
+        <div class="section-header">
+          <span class="eyebrow">Feedback</span>
+          <h3>Toast y progress-container</h3>
+          <p>
+            La plataforma usa feedback de bajo ruido y alta lectura. El toast confirma o
+            alerta. El progress-container traduce capacidad, cumplimiento o selección en una
+            lectura inmediata.
+          </p>
+        </div>
+
+        <div class="grid pattern">
+          <article class="card">
+            <div class="card-header">
+              <h4>Toast</h4>
+              <span>Estados</span>
+            </div>
+            <div class="card-body">
+              <div class="toast-stack">
+                <div class="toast success">✔ Movimiento guardado correctamente</div>
+                <div class="toast error">✖ No se pudo registrar el ajuste</div>
+                <div class="toast info">ℹ Sincronización parcial completada</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-header">
+              <h4>Progress</h4>
+              <span>Capacidad y selección</span>
+            </div>
+            <div class="card-body">
+              <div class="progress-stack">
+                <div class="progress-item">
+                  <div class="progress-label"><span>good</span><span>86%</span></div>
+                  <div class="track">
+                    <div class="fill good"></div>
                   </div>
-                  <div class="info-item">
-                    <strong>Menor tolerancia a textos largos</strong>
-                    dentro de acciones, cards y helper.
+                </div>
+                <div class="progress-item">
+                  <div class="progress-label"><span>regular</span><span>63%</span></div>
+                  <div class="track">
+                    <div class="fill regular"></div>
                   </div>
-                  <div class="info-item">
-                    <strong>Mayor importancia del orden</strong>
-                    entre helper, contenido y acciones.
+                </div>
+                <div class="progress-item">
+                  <div class="progress-label"><span>bad</span><span>34%</span></div>
+                  <div class="track">
+                    <div class="fill bad"></div>
+                  </div>
+                </div>
+                <div class="progress-item">
+                  <div class="progress-label"><span>warn</span><span>18%</span></div>
+                  <div class="track">
+                    <div class="fill warn"></div>
                   </div>
                 </div>
               </div>
-            </article>
-          </div>
-        </section>
+            </div>
+          </article>
+        </div>
+      </section>
 
-        <section class="section" id="icons">
-          <div class="section-header">
-            <span class="eyebrow">Regla mandatoria</span>
-            <h3>SVG icons con fill igual a currentColor</h3>
-            <p>
-              Todo icono SVG usado por el sistema debe permitir heredar color desde CSS. Eso
-              vuelve consistente el uso de estados, temas, hover y clases semánticas como
-              <code>text-main</code>, <code>text-side</code>, <code>text-primary</code>,
-              <code>text-success</code> y <code>text-warn</code>.
-            </p>
-          </div>
+      <section class="section" id="cards">
+        <div class="section-header">
+          <span class="eyebrow">Contenedor</span>
+          <h3>Data card como unidad operativa</h3>
+          <p>
+            La <code>.data-card</code> sigue siendo el contenedor principal de entidad,
+            resumen, KPI o alerta. Su valor está en que mantiene estructura consistente
+            dentro de una UI densa.
+          </p>
+        </div>
 
-          <div class="grid pattern">
-            <article class="card">
-              <div class="card-header">
-                <h4>Regla correcta</h4>
-                <span>SVG base</span>
-              </div>
-              <div class="card-body">
-                <div class="code">&lt;svg
-  xmlns="http://www.w3.org/2000/svg"
-  viewBox="0 0 24 24"
-  fill="currentColor"
-&gt;
-  &lt;path d="..." /&gt;
-&lt;/svg&gt;</div>
-              </div>
-            </article>
-
-            <article class="card">
-              <div class="card-header">
-                <h4>No permitido</h4>
-                <span>Rompe semantica visual</span>
-              </div>
-              <div class="card-body">
-                <div class="code">&lt;svg fill="#1a237e"&gt;...&lt;/svg&gt;
-&lt;svg fill="#000000"&gt;...&lt;/svg&gt;
-&lt;path fill="red" d="..." /&gt;</div>
-                <p style="margin:16px 0 0; color:var(--text-soft); line-height:1.75;">
-                  Cuando el SVG trae color duro, deja de responder a clases del sistema y
-                  rompe la lógica cromática del componente.
-                </p>
-              </div>
-            </article>
-          </div>
-        </section>
-
-        <section class="section" id="clicks">
-          <div class="section-header">
-            <span class="eyebrow">Regla mandatoria</span>
-            <h3>app-button como único elemento de click</h3>
-            <p>
-              Dentro del sistema, todo elemento accionable debe resolverse mediante
-              <code>&lt;app-button&gt;</code>. Esto incluye acciones primarias, icon actions,
-              suffix actions, paginación, filtros, toggles operativos y accesos que visualmente
-              parezcan botones.
-            </p>
-          </div>
-
-          <div class="grid pattern">
-            <article class="card">
-              <div class="card-header">
-                <h4>Regla de uso</h4>
-                <span>Click centralizado</span>
-              </div>
-              <div class="card-body">
-                <div class="info-list">
-                  <div class="info-item">
-                    <strong>Usar</strong>
-                    <code>app-button</code> para toda acción del usuario.
+        <div class="grid pattern">
+          <article class="card">
+            <div class="card-header">
+              <h4>Preview</h4>
+              <span>Variantes</span>
+            </div>
+            <div class="card-body">
+              <div class="info-list">
+                <div class="data-card-demo primary">
+                  <div class="icon-badge">P</div>
+                  <div class="divider-y"></div>
+                  <div class="metrics">
+                    <div class="metric"><small>Producto</small><strong>Maiz temprano</strong></div>
+                    <div class="metric"><small>Stock</small><strong>420 tn</strong></div>
+                    <div class="sample-button small side">Ver detalle</div>
                   </div>
-                  <div class="info-item">
-                    <strong>Evitar</strong>
-                    <code>button</code>, <code>a</code>, <code>div</code> clickable o
-                    <code>ion-button</code> directo como interfaz final de interacción.
+                </div>
+
+                <div class="data-card-demo success">
+                  <div class="icon-badge" style="background:#d1e7d5;color:#29833b;">M</div>
+                  <div class="divider-y"></div>
+                  <div class="metrics">
+                    <div class="metric"><small>Movimiento</small><strong>Ingreso validado</strong></div>
+                    <div class="metric"><small>Cantidad</small><strong>80 tn</strong></div>
+                    <div class="sample-button small side">Auditar</div>
                   </div>
-                  <div class="info-item">
-                    <strong>Beneficio</strong>
-                    una sola capa de semántica, estilos, estados disabled, ids de testing y
-                    manejo de icono y texto.
+                </div>
+
+                <div class="data-card-demo warn">
+                  <div class="icon-badge" style="background:#e4d0d3;color:#8f3c46;">!</div>
+                  <div class="divider-y"></div>
+                  <div class="metrics">
+                    <div class="metric"><small>Alerta</small><strong>Stock bajo</strong></div>
+                    <div class="metric"><small>Disponible</small><strong>12 tn</strong></div>
+                    <div class="sample-button small warn">Reponer</div>
                   </div>
                 </div>
               </div>
-            </article>
+            </div>
+          </article>
 
-            <article class="card">
-              <div class="card-header">
-                <h4>Ejemplo real</h4>
-                <span>Suffix button</span>
-              </div>
-              <div class="card-body">
-                <div class="code">&lt;app-button
-  class="suffix"
-  *ngIf="spreadsheetQuota.controls.quota.value &amp;&amp; spreadsheetQuota.controls.quota.value.length &gt; 0"
-  [btnId]="'spreadsheetQuotaClearBtn'"
-  [btnClass]="'ion-btn icon suffix main'"
-  [btnIcon]="globalImages.ux_close"
-  (clicked)="clearInput()"
-&gt;&lt;/app-button&gt;</div>
-              </div>
-            </article>
-          </div>
-        </section>
-
-        <section class="section" id="welcome">
-          <div class="section-header">
-            <span class="eyebrow">Patrón clave</span>
-            <h3>Welcome como chapa informativa de sección</h3>
-            <p>
-              En Agrostock, <code>.welcome</code> no es solo empty state. También funciona como
-              chapa inicial de contexto de módulo o de tarea. Puede convivir con búsqueda,
-              loaders y estados sin contenido. Su valor real es introducir la acción que sigue.
-            </p>
-          </div>
-
-          <div class="grid pattern">
-            <article class="card">
-              <div class="card-header">
-                <h4>Rol funcional</h4>
-                <span>No es decorativo</span>
-              </div>
-              <div class="card-body">
-                <div class="info-list">
-                  <div class="info-item">
-                    <strong>Contexto de sección</strong>
-                    explica qué acción va a realizar el usuario.
-                  </div>
-                  <div class="info-item">
-                    <strong>Entrada calmada</strong>
-                    reduce brusquedad en pantallas centradas con una sola tarea.
-                  </div>
-                  <div class="info-item">
-                    <strong>Empty state reutilizable</strong>
-                    también puede usarse cuando no hay resultados.
-                  </div>
+          <article class="card">
+            <div class="card-header">
+              <h4>Mapa interno</h4>
+              <span>Estructura</span>
+            </div>
+            <div class="card-body">
+              <div class="info-list">
+                <div class="info-item">
+                  <strong>Variantes visuales</strong>
+                  <code>.data-card</code>, <code>.card-warn</code>,
+                  <code>.card-primary</code>, <code>.card-success</code>,
+                  <code>.skeleton</code>
+                </div>
+                <div class="info-item">
+                  <strong>Anatomía</strong>
+                  <code>.card-header</code>, <code>.card-body</code>,
+                  <code>.card-body_info</code>, <code>.card-body_actions</code>,
+                  <code>.card-divider</code>
+                </div>
+                <div class="info-item">
+                  <strong>Subestructura</strong>
+                  <code>.card-line</code>, <code>.card-line.spaced</code>,
+                  <code>.card-col</code>, <code>.start</code>, <code>.grow</code>
                 </div>
               </div>
-            </article>
+            </div>
+          </article>
+        </div>
+      </section>
 
-            <article class="card">
-              <div class="card-header">
-                <h4>Estructura</h4>
-                <span>Base real</span>
-              </div>
-              <div class="card-body">
-                <div class="code">&lt;div class="welcome"&gt;
-  &lt;ion-icon class="big-icon text-main" [src]="globalImages.ux_reception"&gt;&lt;/ion-icon&gt;
-  &lt;h1 class="main text-main"&gt;{{globalTexts.loadTruck}}&lt;/h1&gt;
-  &lt;p class="side text-side"&gt;{{globalTexts.QuotaNumberandZone}}&lt;/p&gt;
-&lt;/div&gt;</div>
-              </div>
-            </article>
-          </div>
-        </section>
+      <section class="section" id="grid-menu">
+        <div class="section-header">
+          <span class="eyebrow">Contenedor</span>
+          <h3>Grid menu para navegación modular</h3>
+          <p>
+            La grilla dinámica de la V1 acompaña bien este componente, pero su rol sigue
+            siendo navegación o acceso a módulos, no listado operativo de datos.
+          </p>
+        </div>
 
-        <section class="section" id="search">
-          <div class="section-header">
-            <span class="eyebrow">Patrón clave</span>
-            <h3>Search bar container como addon singleton por componente</h3>
-            <p>
-              La búsqueda no se interpreta como un bloque global del sistema. Se interpreta como
-              un módulo de entrada asociado a una pantalla o componente concreto. Por eso
-              <code>.search_bar-container</code> funciona como addon singleton: aparece cuando la
-              tarea lo necesita y no compite con el resto del layout.
-            </p>
-          </div>
-
-          <div class="grid pattern">
-            <article class="card">
-              <div class="card-header">
-                <h4>Lectura correcta</h4>
-                <span>Una pantalla, una búsqueda</span>
-              </div>
-              <div class="card-body">
-                <div class="info-list">
-                  <div class="info-item">
-                    <strong>Singleton visual</strong>
-                    normalmente una sola búsqueda principal por pantalla.
-                  </div>
-                  <div class="info-item">
-                    <strong>Acoplada al flujo</strong>
-                    puede vivir debajo de welcome o arriba de resultados.
-                  </div>
-                  <div class="info-item">
-                    <strong>Con acciones internas</strong>
-                    prefijo, suffix clear, submit y chips o zonas opcionales.
-                  </div>
+        <div class="grid pattern">
+          <article class="card">
+            <div class="card-header">
+              <h4>Preview</h4>
+              <span>Módulos</span>
+            </div>
+            <div class="card-body">
+              <div class="tiles">
+                <div class="tile blue">
+                  <div class="tile-mark">S</div>
+                  <strong>Stock</strong>
+                </div>
+                <div class="tile teal">
+                  <div class="tile-mark">M</div>
+                  <strong>Movimientos</strong>
+                </div>
+                <div class="tile grey">
+                  <div class="tile-mark">R</div>
+                  <strong>Reportes</strong>
                 </div>
               </div>
-            </article>
+            </div>
+          </article>
 
-            <article class="card">
-              <div class="card-header">
-                <h4>Estructura real</h4>
-                <span>Barra con input y action</span>
-              </div>
-              <div class="card-body">
-                <div class="code">&lt;div class="search_bar"&gt;
-  &lt;div class="search_bar-input"&gt;
-    &lt;ion-input class="input"&gt;&lt;/ion-input&gt;
-    &lt;ion-icon class="prefix"&gt;&lt;/ion-icon&gt;
-    &lt;app-button class="suffix"&gt;&lt;/app-button&gt;
-  &lt;/div&gt;
-
-  &lt;div class="search_bar-actions"&gt;
-    &lt;app-button&gt;&lt;/app-button&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</div>
-              </div>
-            </article>
-          </div>
-        </section>
-
-        <section class="section" id="header">
-          <div class="section-header">
-            <span class="eyebrow">Header real</span>
-            <h3>app-header como wrapper canónico de navegación</h3>
-            <p>
-              En los templates reales, la cabecera visible no se instancia como
-              <code>ion-header</code> directo, sino como <code>app-header</code>. Eso debe quedar
-              documentado como contrato visual del sistema.
-            </p>
-          </div>
-
-          <div class="grid pattern">
-            <article class="card">
-              <div class="card-header">
-                <h4>Uso base</h4>
-                <span>Simple</span>
-              </div>
-              <div class="card-body">
-                <div class="code">&lt;app-header [titleHeader]="" [subTitleHeader]=""&gt;&lt;/app-header&gt;</div>
-              </div>
-            </article>
-
-            <article class="card">
-              <div class="card-header">
-                <h4>Uso con condición</h4>
-                <span>Hidden por flujo</span>
-              </div>
-              <div class="card-body">
-                <div class="code">&lt;app-header
-  [titleHeader]=""
-  [subTitleHeader]=""
-  [hidden]="scanQrService.activeScan()"
-&gt;&lt;/app-header&gt;</div>
-              </div>
-            </article>
-          </div>
-        </section>
-
-        <section class="section" id="layout">
-          <div class="section-header">
-            <span class="eyebrow">Layout</span>
-            <h3>Estructura madre de pantalla</h3>
-            <p>
-              El orden del sistema sigue siendo estable, pero ahora se documenta desde los
-              patrones reales detectados. La pantalla puede estar centrada, con resultados o con
-              filtro lateral, sin perder su jerarquía.
-            </p>
-          </div>
-
-          <div class="grid pattern">
-            <article class="card">
-              <div class="card-header">
-                <h4>Mapa visual</h4>
-                <span>Orden recomendado</span>
-              </div>
-              <div class="card-body">
-                <div class="flow-demo">
-                  <div class="flow-block header">app-header</div>
-                  <div class="flow-block welcome">welcome opcional como chapa o empty state</div>
-                  <div class="flow-block search">search_bar-container opcional, singleton por componente</div>
-                  <div class="flow-block helper">helper con resume y paginación</div>
-                  <div class="flow-block content">content-view con cards, listas o resultados</div>
-                  <div class="flow-block actions">main-actions con progreso y acción principal</div>
+          <article class="card">
+            <div class="card-header">
+              <h4>Mapa técnico</h4>
+              <span>Variantes</span>
+            </div>
+            <div class="card-body">
+              <div class="info-list">
+                <div class="info-item">
+                  <strong>Cantidad</strong>
+                  <code>.grid-menu.--6-items</code>,
+                  <code>.grid-menu.--3-items</code>,
+                  <code>.grid-menu.--2-items</code>
+                </div>
+                <div class="info-item">
+                  <strong>Color</strong>
+                  <code>.grid-item.color-blue</code>,
+                  <code>.grid-item.color-teal</code>,
+                  <code>.grid-item.color-grey</code>
+                </div>
+                <div class="info-item">
+                  <strong>Estructura</strong>
+                  <code>.grid-menu &gt; .item &gt; .grid-item &gt; .custom-icon + .label</code>
                 </div>
               </div>
-            </article>
+            </div>
+          </article>
+        </div>
+      </section>
 
-            <article class="card">
-              <div class="card-header">
-                <h4>Vista con filter panel</h4>
-                <span>Page layout expandido</span>
-              </div>
-              <div class="card-body">
-                <div class="flow-demo">
-                  <div class="flow-block filter">app-filter-panel dentro de page-layout.filter-open</div>
-                  <div class="flow-block content">main-container con helper.w-filter, content-view y main-actions</div>
+      <section class="section" id="template-welcome-search">
+        <div class="section-header">
+          <span class="eyebrow">Template diagnosticado</span>
+          <h3>Pantalla con welcome y búsqueda</h3>
+          <p>
+            Este patrón se usa para tareas centradas en una sola acción. El welcome introduce
+            la operación, la búsqueda se presenta debajo como única entrada fuerte y el loader
+            convive sin romper el layout.
+          </p>
+        </div>
+
+        <div class="grid pattern">
+          <article class="card">
+            <div class="card-header">
+              <h4>Lectura del patrón</h4>
+              <span>Uso recomendado</span>
+            </div>
+            <div class="card-body">
+              <div class="info-list">
+                <div class="info-item">
+                  <strong>Estructura</strong>
+                  <code>app-header + ion-content + main-container.center + welcome + search_bar-container + spinner</code>
+                </div>
+                <div class="info-item">
+                  <strong>Función de welcome</strong>
+                  chapa informativa de módulo.
+                </div>
+                <div class="info-item">
+                  <strong>Función de search</strong>
+                  entrada singleton de tarea.
+                </div>
+                <div class="info-item">
+                  <strong>Función del suffix</strong>
+                  limpiar input vía <code>app-button</code>.
                 </div>
               </div>
-            </article>
-          </div>
-        </section>
+            </div>
+          </article>
 
-        <section class="section" id="helper">
-          <div class="section-header">
-            <span class="eyebrow">Bloques operativos</span>
-            <h3>Helper, content-view y main-actions</h3>
-            <p>
-              Estos tres bloques sostienen la operativa de resultados. El helper resume, el
-              content-view contiene y el main-actions acciona. En Agrostock conviene conservar
-              esa separación incluso en pantallas chicas o centradas.
-            </p>
-          </div>
+          <article class="card">
+            <div class="card-header">
+              <h4>Template real</h4>
+              <span>Referencia</span>
+            </div>
+            <div class="card-body">
+              <div class="code">&lt;!-- NAVBAR --&gt;
+                &lt;app-header [titleHeader]="" [subTitleHeader]=""&gt;&lt;/app-header&gt;
 
-          <table class="table">
-            <thead>
-              <tr>
-                <th>Bloque</th>
-                <th>Variantes</th>
-                <th>Uso</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><code>.helper</code></td>
-                <td><code>.helper</code>, <code>.helper.w-filter</code></td>
-                <td>Resume, filters CTA, paginación, contexto de resultados</td>
-              </tr>
-              <tr>
-                <td><code>.content-view</code></td>
-                <td><code>.content-view</code>, <code>.w-actions</code>, <code>.fluid-height</code>, <code>.center</code></td>
-                <td>Contenido principal de pantalla</td>
-              </tr>
-              <tr>
-                <td><code>.main-actions</code></td>
-                <td>con o sin <code>.progress-container</code></td>
-                <td>Acción primaria, confirmación, guardado o avance</td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
+                &lt;!-- COMPONENT CONTENT --&gt;
+                &lt;ion-content&gt;
+                &lt;div class="main-container center"&gt;
+                &lt;div class="welcome"&gt;
+                &lt;ion-icon class="big-icon text-main" [src]="globalImages.ux_reception"&gt;&lt;/ion-icon&gt;
+                &lt;h1 class="main text-main"&gt;{{globalTexts.loadTruck}}&lt;/h1&gt;
+                &lt;p class="side text-side"&gt;{{globalTexts.QuotaNumberandZone}}&lt;/p&gt;
+                &lt;/div&gt;
 
-        <section class="section" id="inputs">
-          <div class="section-header">
-            <span class="eyebrow">Inputs</span>
-            <h3>ion-item.input-container y search_bar</h3>
-            <p>
-              El sistema mantiene dos canales claros de entrada. El campo formal de formulario
-              sobre <code>ion-item.input-container</code> y la búsqueda central sobre
-              <code>.search_bar</code>. Ambos deben convivir con estados visuales de Ionic.
-            </p>
-          </div>
+                &lt;div class="search_bar-container"&gt;
+                &lt;form
+                class="form"
+                *ngIf="resultData &amp;&amp; resultData.length &gt; 0"
+                [formGroup]="spreadsheetQuota"
+                (ngSubmit)="navigateToSpreadsheetWithQuotaPrintTags()"
+                &gt;
+                &lt;div class="search_bar"&gt;
+                &lt;div class="search_bar-input"&gt;
+                &lt;ion-input
+                type="tel"
+                class="input"
+                placeholder="Ingresá el N° de Cupo"
+                formControlName="quota"
+                (ionInput)="onInputNumbers($event, quota)"
+                #quota
+                &gt;&lt;/ion-input&gt;
 
-          <div class="grid pattern">
-            <article class="card">
-              <div class="card-header">
-                <h4>Estados</h4>
-                <span>Campos base</span>
-              </div>
-              <div class="card-body">
-                <div class="field-grid">
-                  <div class="field">
-                    <label>Normal</label>
-                    <div class="field-box"><span>📦</span><input value="Producto" /></div>
-                  </div>
-                  <div class="field">
-                    <label>Con foco</label>
-                    <div class="field-box focus"><span>🏷</span><input value="Lote" /></div>
-                  </div>
-                  <div class="field">
-                    <label>Error</label>
-                    <div class="field-box error"><span>!</span><input value="Cantidad" /></div>
-                  </div>
-                  <div class="field">
-                    <label>Disabled</label>
-                    <div class="field-box disabled"><span>🔒</span><input value="Unidad" /></div>
-                  </div>
+                &lt;ion-icon class="prefix" [src]="globalImages.ux_bullet_list_alt"&gt;&lt;/ion-icon&gt;
+
+                &lt;app-button
+                class="suffix"
+                *ngIf="spreadsheetQuota.controls.quota.value &amp;&amp; spreadsheetQuota.controls.quota.value.length
+                &gt; 0"
+                [btnId]="'spreadsheetQuotaClearBtn'"
+                [btnClass]="'ion-btn icon suffix main'"
+                [btnIcon]="globalImages.ux_close"
+                (clicked)="clearInput()"
+                &gt;&lt;/app-button&gt;
+                &lt;/div&gt;
+
+                &lt;div class="search_bar-actions"&gt;
+                &lt;app-button
+                [btnId]="'spreadsheetQuotaBtn'"
+                [btnType]="'submit'"
+                [btnClass]="'ion-btn submit'"
+                [btnIcon]="globalImages.ux_dispatch"
+                [btnText]="globalTexts.newDownload"
+                [btnDisabled]="!spreadsheetQuota.valid"
+                &gt;&lt;/app-button&gt;
+                &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;/form&gt;
+
+                &lt;div class="error_inline" *ngIf="!resultData &amp;&amp; resultData.length &lt; 1"&gt;
+                &lt;ion-icon slot="start" [src]="globalImages.ux_halt"&gt;&lt;/ion-icon&gt;
+                &lt;h3&gt;Error al obtener los datos, actualiza la página&lt;/h3&gt;
+                &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;app-spinners
+                [showSpinner]="!resultData.length"
+                [type]="'circular'"
+                [textSpinner]="globalTexts.loading"
+                &gt;&lt;/app-spinners&gt;
+                &lt;/div&gt;
+                &lt;/ion-content&gt;</div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="template-main-no-filter">
+        <div class="section-header">
+          <span class="eyebrow">Template diagnosticado</span>
+          <h3>Pantalla main sin side filter</h3>
+          <p>
+            Este patrón arranca directamente desde resultados. No necesita búsqueda visible
+            ni panel lateral. El helper resume, el content-view lista y el main-actions
+            confirma.
+          </p>
+        </div>
+
+        <div class="grid pattern">
+          <article class="card">
+            <div class="card-header">
+              <h4>Lectura del patrón</h4>
+              <span>Uso recomendado</span>
+            </div>
+            <div class="card-body">
+              <div class="info-list">
+                <div class="info-item">
+                  <strong>Estructura</strong>
+                  <code>app-header + ion-content + main-container + helper + content-view.w-actions + main-actions</code>
+                </div>
+                <div class="info-item">
+                  <strong>Centro condicional</strong>
+                  <code>[class.center]="showSpinner || (!data || data.length === 0)"</code>
+                  permite convivir entre resultados, loader y empty state.
+                </div>
+                <div class="info-item">
+                  <strong>Empty state</strong>
+                  welcome vuelve a aparecer como respuesta de ausencia de datos.
                 </div>
               </div>
-            </article>
+            </div>
+          </article>
 
-            <article class="card">
-              <div class="card-header">
-                <h4>Mapa real</h4>
-                <span>Clases</span>
-              </div>
-              <div class="card-body">
-                <div class="info-list">
-                  <div class="info-item">
-                    <strong>Formulario</strong>
-                    <code>ion-item.input-container</code>,
-                    <code>.w-prefix</code>,
-                    <code>.item-has-focus</code>,
-                    <code>.item-has-value</code>,
-                    <code>.ion-invalid.ion-touched</code>,
-                    <code>.item-interactive-disabled</code>
-                  </div>
-                  <div class="info-item">
-                    <strong>Búsqueda</strong>
-                    <code>.search_bar</code>,
-                    <code>.search_bar-input</code>,
-                    <code>.search_bar-actions</code>,
-                    <code>.prefix</code>,
-                    <code>.suffix</code>
-                  </div>
+          <article class="card">
+            <div class="card-header">
+              <h4>Template real</h4>
+              <span>Referencia</span>
+            </div>
+            <div class="card-body">
+              <div class="code">&lt;!-- NAVBAR --&gt;
+                &lt;app-header [titleHeader]="" [subTitleHeader]=""
+                [hidden]="scanQrService.activeScan()"&gt;&lt;/app-header&gt;
+
+                &lt;!-- COMPONENT CONTENT --&gt;
+                &lt;ion-content [hidden]="scanQrService.activeScan()"&gt;
+                &lt;div class="main-container" [class.center]="showSpinner || (!data || data.length === 0)"&gt;
+                &lt;ng-container *ngIf="data &amp;&amp; !showSpinner"&gt;
+                &lt;div class="helper"&gt;
+                &lt;div class="resume"&gt;
+                &lt;h3 class="resume_text"&gt;
+                {{ data.length }} {{ data.length === 1 ? globalTexts.product : globalTexts.products }}
+                {{ globalTexts.toConfirm }}
+                &lt;/h3&gt;
+                &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class="content-view w-actions"&gt;
+                &lt;app-card-complete-spreadsheet
+                *ngFor="let item of data"
+                [productId]="item.productJde"
+                [productDescription]="item.Description"
+                [quantity]="item.spAmount"
+                [unit]="item.UM"
+                [selected]="!!item.checked"
+                [rowData]="item"
+                (viewClicked)="onViewProduct($event)"
+                &gt;&lt;/app-card-complete-spreadsheet&gt;
+                &lt;/div&gt;
+
+                &lt;div class="main-actions"&gt;
+                &lt;app-button
+                [btnId]="'spreadOkBtn'"
+                [btnClass]="'ion-btn success large'"
+                [btnIcon]="globalImages.ux_check_list"
+                [btnText]="globalTexts.confirmSpreadsheet"
+                [btnDisabled]="disabled"
+                (clicked)="closeSpreadsheet()"
+                &gt;&lt;/app-button&gt;
+                &lt;/div&gt;
+                &lt;/ng-container&gt;
+
+                &lt;app-spinners
+                [showSpinner]="showSpinner"
+                [type]="'circular'"
+                [textSpinner]="globalTexts.loading"
+                &gt;&lt;/app-spinners&gt;
+
+                &lt;ng-container *ngIf="!showSpinner &amp;&amp; (!data || data.length === 0)"&gt;
+                &lt;div class="welcome"&gt;
+                &lt;ion-icon class="big-icon text-main" [src]="globalImages.ux_halt"&gt;&lt;/ion-icon&gt;
+                &lt;h1 class="main text-main"&gt;Nada por aquí!&lt;/h1&gt;
+                &lt;p class="side text-side"&gt;Intenta con una búsqueda diferente...&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;/ng-container&gt;
+                &lt;/div&gt;
+                &lt;/ion-content&gt;</div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="template-main-filter">
+        <div class="section-header">
+          <span class="eyebrow">Template diagnosticado</span>
+          <h3>Pantalla main con side filter</h3>
+          <p>
+            Este patrón suma <code>page-layout</code> y <code>app-filter-panel</code>. El
+            helper crece con CTA de filtros y paginación. El main-actions puede combinar
+            progreso y acción primaria.
+          </p>
+        </div>
+
+        <div class="grid pattern">
+          <article class="card">
+            <div class="card-header">
+              <h4>Lectura del patrón</h4>
+              <span>Uso recomendado</span>
+            </div>
+            <div class="card-body">
+              <div class="info-list">
+                <div class="info-item">
+                  <strong>Layout</strong>
+                  <code>page-layout</code> agrega el panel lateral sin romper la columna
+                  principal.
+                </div>
+                <div class="info-item">
+                  <strong>Helper expandido</strong>
+                  suma botón de filtros y paginación.
+                </div>
+                <div class="info-item">
+                  <strong>Main actions enriquecido</strong>
+                  puede llevar <code>.progress-container</code> y un
+                  <code>app-button</code> principal.
                 </div>
               </div>
-            </article>
-          </div>
-        </section>
+            </div>
+          </article>
 
-        <section class="section" id="buttons">
-          <div class="section-header">
-            <span class="eyebrow">Buttons</span>
-            <h3>Variantes visuales delegadas a app-button</h3>
-            <p>
-              Aunque visualmente el sistema siga hablando en términos de
-              <code>ion-btn</code>, la instancia real de click es <code>app-button</code>.
-              El design system debe documentar ambas capas juntas.
-            </p>
-          </div>
+          <article class="card">
+            <div class="card-header">
+              <h4>Template real</h4>
+              <span>Referencia</span>
+            </div>
+            <div class="card-body">
+              <div class="code">&lt;!-- NAVBAR --&gt;
+                &lt;app-header [titleHeader]="" [subTitleHeader]=""&gt;&lt;/app-header&gt;
 
-          <div class="grid pattern">
-            <article class="card">
-              <div class="card-header">
-                <h4>Preview visual</h4>
-                <span>Tamaño y semántica</span>
-              </div>
-              <div class="card-body">
-                <div class="button-row">
-                  <div class="sample-button small side">small</div>
-                  <div class="sample-button medium primary">medium</div>
-                  <div class="sample-button large success">large</div>
-                  <div class="sample-button icon primary">+</div>
-                </div>
+                &lt;!-- COMPONENT CONTENT --&gt;
+                &lt;ion-content&gt;
+                &lt;div class="page-layout" [class.filter-open]="isFilterOpen"&gt;
+                &lt;app-filter-panel
+                [isOpen]="isFilterOpen"
+                [searchPlaceholder]="globalTexts.searchPallet"
+                [searchValue]="searchText"
+                [checkboxOptions]="filterCheckboxOptions"
+                [showCheckboxes]="true"
+                [clearButtonText]="globalTexts.clearFilters"
+                [formGroup]="checkBoxses"
+                (searchChange)="onSearchChange($event)"
+                (filterChange)="applyFilters()"
+                (clearFilters)="clearFilters()"
+                &gt;&lt;/app-filter-panel&gt;
 
-                <div style="height:16px;"></div>
+                &lt;div class="main-container" [class.center]="showSpinner || (!hasElements || hasElements.length ===
+                0)"&gt;
+                &lt;ng-container *ngIf="hasElements"&gt;
+                &lt;div class="helper w-filter"&gt;
+                &lt;div class="resume"&gt;
+                &lt;app-button
+                [btnId]="'paginationPrevBtn'"
+                [btnClass]="'ion-btn side small'"
+                [btnIcon]="!isFilterOpen ? globalImages.ux_filter_on : globalImages.ux_filter_off"
+                [btnText]="globalTexts.filters"
+                (clicked)="isFilterOpen = !isFilterOpen"
+                &gt;&lt;/app-button&gt;
 
-                <div class="button-row">
-                  <div class="sample-button medium primary">primary</div>
-                  <div class="sample-button medium primary-soft">primary soft</div>
-                  <div class="sample-button medium success">success</div>
-                  <div class="sample-button medium warn">warn</div>
-                  <div class="sample-button medium side">side</div>
-                  <div class="sample-button medium main">main</div>
-                  <div class="sample-button medium disabled">disabled</div>
-                </div>
+                &lt;h3 class="resume_text"&gt;
+                {{ filteredData.length }}
+                {{ filteredData.length === 1 ? globalTexts.pallet : globalTexts.pallets }}
+                {{ globalTexts.available_plural }}
+                &lt;/h3&gt;
+                &lt;/div&gt;
 
-                <div style="height:16px;"></div>
+                &lt;div class="pagination" *ngIf="totalPages &gt; 1"&gt;
+                &lt;app-button
+                [btnId]="'paginationPrevBtn'"
+                [btnClass]="'ion-btn side small'"
+                [btnIcon]="globalImages.ux_prev"
+                [btnText]="isFilterOpen ? '' : globalTexts.previous"
+                [btnDisabled]="!canGoPrevious"
+                (clicked)="previousPage()"
+                &gt;&lt;/app-button&gt;
 
-                <div class="group">
-                  <div class="sample-button side">Todos</div>
-                  <div class="sample-button side">Ingresos</div>
-                  <div class="sample-button side">Egresos</div>
-                </div>
-              </div>
-            </article>
+                &lt;span class="info"&gt;
+                {{globalTexts.page}} {{ currentPage }} {{globalTexts.of}} {{ totalPages }}
+                &lt;/span&gt;
 
-            <article class="card">
-              <div class="card-header">
-                <h4>Mapa técnico</h4>
-                <span>btnClass</span>
-              </div>
-              <div class="card-body">
-                <div class="info-list">
-                  <div class="info-item">
-                    <strong>Tamaños</strong>
-                    <code>.x-small</code>, <code>.small</code>, <code>.medium</code>,
-                    <code>.large</code>, <code>.icon</code>, <code>.icon.large</code>,
-                    <code>.icon.suffix</code>
-                  </div>
-                  <div class="info-item">
-                    <strong>Intención</strong>
-                    <code>.primary</code>, <code>.primary--soft</code>,
-                    <code>.success</code>, <code>.success--soft</code>,
-                    <code>.warn</code>, <code>.warn--soft</code>,
-                    <code>.main</code>, <code>.main--primary</code>,
-                    <code>.side</code>, <code>.submit</code>, <code>.scan</code>
-                  </div>
-                  <div class="info-item">
-                    <strong>Grupo</strong>
-                    <code>.group_left</code>, <code>.group_middle</code>,
-                    <code>.group_right</code>
-                  </div>
-                </div>
-              </div>
-            </article>
-          </div>
-        </section>
+                &lt;app-button
+                [btnId]="'paginationNextBtn'"
+                [btnClass]="'ion-btn side small'"
+                [btnIcon]="globalImages.ux_next"
+                [btnText]="isFilterOpen ? '' : globalTexts.next"
+                [btnDisabled]="!canGoNext"
+                (clicked)="nextPage()"
+                &gt;&lt;/app-button&gt;
+                &lt;/div&gt;
+                &lt;/div&gt;
 
-        <section class="section" id="feedback">
-          <div class="section-header">
-            <span class="eyebrow">Feedback</span>
-            <h3>Toast y progress-container</h3>
-            <p>
-              La plataforma usa feedback de bajo ruido y alta lectura. El toast confirma o
-              alerta. El progress-container traduce capacidad, cumplimiento o selección en una
-              lectura inmediata.
-            </p>
-          </div>
-
-          <div class="grid pattern">
-            <article class="card">
-              <div class="card-header">
-                <h4>Toast</h4>
-                <span>Estados</span>
-              </div>
-              <div class="card-body">
-                <div class="toast-stack">
-                  <div class="toast success">✔ Movimiento guardado correctamente</div>
-                  <div class="toast error">✖ No se pudo registrar el ajuste</div>
-                  <div class="toast info">ℹ Sincronización parcial completada</div>
-                </div>
-              </div>
-            </article>
-
-            <article class="card">
-              <div class="card-header">
-                <h4>Progress</h4>
-                <span>Capacidad y selección</span>
-              </div>
-              <div class="card-body">
-                <div class="progress-stack">
-                  <div class="progress-item">
-                    <div class="progress-label"><span>good</span><span>86%</span></div>
-                    <div class="track"><div class="fill good"></div></div>
-                  </div>
-                  <div class="progress-item">
-                    <div class="progress-label"><span>regular</span><span>63%</span></div>
-                    <div class="track"><div class="fill regular"></div></div>
-                  </div>
-                  <div class="progress-item">
-                    <div class="progress-label"><span>bad</span><span>34%</span></div>
-                    <div class="track"><div class="fill bad"></div></div>
-                  </div>
-                  <div class="progress-item">
-                    <div class="progress-label"><span>warn</span><span>18%</span></div>
-                    <div class="track"><div class="fill warn"></div></div>
-                  </div>
-                </div>
-              </div>
-            </article>
-          </div>
-        </section>
-
-        <section class="section" id="cards">
-          <div class="section-header">
-            <span class="eyebrow">Contenedor</span>
-            <h3>Data card como unidad operativa</h3>
-            <p>
-              La <code>.data-card</code> sigue siendo el contenedor principal de entidad,
-              resumen, KPI o alerta. Su valor está en que mantiene estructura consistente
-              dentro de una UI densa.
-            </p>
-          </div>
-
-          <div class="grid pattern">
-            <article class="card">
-              <div class="card-header">
-                <h4>Preview</h4>
-                <span>Variantes</span>
-              </div>
-              <div class="card-body">
-                <div class="info-list">
-                  <div class="data-card-demo primary">
-                    <div class="icon-badge">P</div>
-                    <div class="divider-y"></div>
-                    <div class="metrics">
-                      <div class="metric"><small>Producto</small><strong>Maiz temprano</strong></div>
-                      <div class="metric"><small>Stock</small><strong>420 tn</strong></div>
-                      <div class="sample-button small side">Ver detalle</div>
-                    </div>
-                  </div>
-
-                  <div class="data-card-demo success">
-                    <div class="icon-badge" style="background:#d1e7d5;color:#29833b;">M</div>
-                    <div class="divider-y"></div>
-                    <div class="metrics">
-                      <div class="metric"><small>Movimiento</small><strong>Ingreso validado</strong></div>
-                      <div class="metric"><small>Cantidad</small><strong>80 tn</strong></div>
-                      <div class="sample-button small side">Auditar</div>
-                    </div>
-                  </div>
-
-                  <div class="data-card-demo warn">
-                    <div class="icon-badge" style="background:#e4d0d3;color:#8f3c46;">!</div>
-                    <div class="divider-y"></div>
-                    <div class="metrics">
-                      <div class="metric"><small>Alerta</small><strong>Stock bajo</strong></div>
-                      <div class="metric"><small>Disponible</small><strong>12 tn</strong></div>
-                      <div class="sample-button small warn">Reponer</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <article class="card">
-              <div class="card-header">
-                <h4>Mapa interno</h4>
-                <span>Estructura</span>
-              </div>
-              <div class="card-body">
-                <div class="info-list">
-                  <div class="info-item">
-                    <strong>Variantes visuales</strong>
-                    <code>.data-card</code>, <code>.card-warn</code>,
-                    <code>.card-primary</code>, <code>.card-success</code>,
-                    <code>.skeleton</code>
-                  </div>
-                  <div class="info-item">
-                    <strong>Anatomía</strong>
-                    <code>.card-header</code>, <code>.card-body</code>,
-                    <code>.card-body_info</code>, <code>.card-body_actions</code>,
-                    <code>.card-divider</code>
-                  </div>
-                  <div class="info-item">
-                    <strong>Subestructura</strong>
-                    <code>.card-line</code>, <code>.card-line.spaced</code>,
-                    <code>.card-col</code>, <code>.start</code>, <code>.grow</code>
-                  </div>
-                </div>
-              </div>
-            </article>
-          </div>
-        </section>
-
-        <section class="section" id="grid-menu">
-          <div class="section-header">
-            <span class="eyebrow">Contenedor</span>
-            <h3>Grid menu para navegación modular</h3>
-            <p>
-              La grilla dinámica de la V1 acompaña bien este componente, pero su rol sigue
-              siendo navegación o acceso a módulos, no listado operativo de datos.
-            </p>
-          </div>
-
-          <div class="grid pattern">
-            <article class="card">
-              <div class="card-header">
-                <h4>Preview</h4>
-                <span>Módulos</span>
-              </div>
-              <div class="card-body">
-                <div class="tiles">
-                  <div class="tile blue">
-                    <div class="tile-mark">S</div>
-                    <strong>Stock</strong>
-                  </div>
-                  <div class="tile teal">
-                    <div class="tile-mark">M</div>
-                    <strong>Movimientos</strong>
-                  </div>
-                  <div class="tile grey">
-                    <div class="tile-mark">R</div>
-                    <strong>Reportes</strong>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <article class="card">
-              <div class="card-header">
-                <h4>Mapa técnico</h4>
-                <span>Variantes</span>
-              </div>
-              <div class="card-body">
-                <div class="info-list">
-                  <div class="info-item">
-                    <strong>Cantidad</strong>
-                    <code>.grid-menu.--6-items</code>,
-                    <code>.grid-menu.--3-items</code>,
-                    <code>.grid-menu.--2-items</code>
-                  </div>
-                  <div class="info-item">
-                    <strong>Color</strong>
-                    <code>.grid-item.color-blue</code>,
-                    <code>.grid-item.color-teal</code>,
-                    <code>.grid-item.color-grey</code>
-                  </div>
-                  <div class="info-item">
-                    <strong>Estructura</strong>
-                    <code>.grid-menu &gt; .item &gt; .grid-item &gt; .custom-icon + .label</code>
-                  </div>
-                </div>
-              </div>
-            </article>
-          </div>
-        </section>
-
-        <section class="section" id="template-welcome-search">
-          <div class="section-header">
-            <span class="eyebrow">Template diagnosticado</span>
-            <h3>Pantalla con welcome y búsqueda</h3>
-            <p>
-              Este patrón se usa para tareas centradas en una sola acción. El welcome introduce
-              la operación, la búsqueda se presenta debajo como única entrada fuerte y el loader
-              convive sin romper el layout.
-            </p>
-          </div>
-
-          <div class="grid pattern">
-            <article class="card">
-              <div class="card-header">
-                <h4>Lectura del patrón</h4>
-                <span>Uso recomendado</span>
-              </div>
-              <div class="card-body">
-                <div class="info-list">
-                  <div class="info-item">
-                    <strong>Estructura</strong>
-                    <code>app-header + ion-content + main-container.center + welcome + search_bar-container + spinner</code>
-                  </div>
-                  <div class="info-item">
-                    <strong>Función de welcome</strong>
-                    chapa informativa de módulo.
-                  </div>
-                  <div class="info-item">
-                    <strong>Función de search</strong>
-                    entrada singleton de tarea.
-                  </div>
-                  <div class="info-item">
-                    <strong>Función del suffix</strong>
-                    limpiar input vía <code>app-button</code>.
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <article class="card">
-              <div class="card-header">
-                <h4>Template real</h4>
-                <span>Referencia</span>
-              </div>
-              <div class="card-body">
-                <div class="code">&lt;!-- NAVBAR --&gt;
-&lt;app-header [titleHeader]="" [subTitleHeader]=""&gt;&lt;/app-header&gt;
-
-&lt;!-- COMPONENT CONTENT --&gt;
-&lt;ion-content&gt;
-  &lt;div class="main-container center"&gt;
-    &lt;div class="welcome"&gt;
-      &lt;ion-icon class="big-icon text-main" [src]="globalImages.ux_reception"&gt;&lt;/ion-icon&gt;
-      &lt;h1 class="main text-main"&gt;{{globalTexts.loadTruck}}&lt;/h1&gt;
-      &lt;p class="side text-side"&gt;{{globalTexts.QuotaNumberandZone}}&lt;/p&gt;
-    &lt;/div&gt;
-
-    &lt;div class="search_bar-container"&gt;
-      &lt;form
-        class="form"
-        *ngIf="resultData &amp;&amp; resultData.length &gt; 0"
-        [formGroup]="spreadsheetQuota"
-        (ngSubmit)="navigateToSpreadsheetWithQuotaPrintTags()"
-      &gt;
-        &lt;div class="search_bar"&gt;
-          &lt;div class="search_bar-input"&gt;
-            &lt;ion-input
-              type="tel"
-              class="input"
-              placeholder="Ingresá el N° de Cupo"
-              formControlName="quota"
-              (ionInput)="onInputNumbers($event, quota)"
-              #quota
-            &gt;&lt;/ion-input&gt;
-
-            &lt;ion-icon class="prefix" [src]="globalImages.ux_bullet_list_alt"&gt;&lt;/ion-icon&gt;
-
-            &lt;app-button
-              class="suffix"
-              *ngIf="spreadsheetQuota.controls.quota.value &amp;&amp; spreadsheetQuota.controls.quota.value.length &gt; 0"
-              [btnId]="'spreadsheetQuotaClearBtn'"
-              [btnClass]="'ion-btn icon suffix main'"
-              [btnIcon]="globalImages.ux_close"
-              (clicked)="clearInput()"
-            &gt;&lt;/app-button&gt;
-          &lt;/div&gt;
-
-          &lt;div class="search_bar-actions"&gt;
-            &lt;app-button
-              [btnId]="'spreadsheetQuotaBtn'"
-              [btnType]="'submit'"
-              [btnClass]="'ion-btn submit'"
-              [btnIcon]="globalImages.ux_dispatch"
-              [btnText]="globalTexts.newDownload"
-              [btnDisabled]="!spreadsheetQuota.valid"
-            &gt;&lt;/app-button&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/form&gt;
-
-      &lt;div class="error_inline" *ngIf="!resultData &amp;&amp; resultData.length &lt; 1"&gt;
-        &lt;ion-icon slot="start" [src]="globalImages.ux_halt"&gt;&lt;/ion-icon&gt;
-        &lt;h3&gt;Error al obtener los datos, actualiza la página&lt;/h3&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;app-spinners
-      [showSpinner]="!resultData.length"
-      [type]="'circular'"
-      [textSpinner]="globalTexts.loading"
-    &gt;&lt;/app-spinners&gt;
-  &lt;/div&gt;
-&lt;/ion-content&gt;</div>
-              </div>
-            </article>
-          </div>
-        </section>
-
-        <section class="section" id="template-main-no-filter">
-          <div class="section-header">
-            <span class="eyebrow">Template diagnosticado</span>
-            <h3>Pantalla main sin side filter</h3>
-            <p>
-              Este patrón arranca directamente desde resultados. No necesita búsqueda visible
-              ni panel lateral. El helper resume, el content-view lista y el main-actions
-              confirma.
-            </p>
-          </div>
-
-          <div class="grid pattern">
-            <article class="card">
-              <div class="card-header">
-                <h4>Lectura del patrón</h4>
-                <span>Uso recomendado</span>
-              </div>
-              <div class="card-body">
-                <div class="info-list">
-                  <div class="info-item">
-                    <strong>Estructura</strong>
-                    <code>app-header + ion-content + main-container + helper + content-view.w-actions + main-actions</code>
-                  </div>
-                  <div class="info-item">
-                    <strong>Centro condicional</strong>
-                    <code>[class.center]="showSpinner || (!data || data.length === 0)"</code>
-                    permite convivir entre resultados, loader y empty state.
-                  </div>
-                  <div class="info-item">
-                    <strong>Empty state</strong>
-                    welcome vuelve a aparecer como respuesta de ausencia de datos.
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <article class="card">
-              <div class="card-header">
-                <h4>Template real</h4>
-                <span>Referencia</span>
-              </div>
-              <div class="card-body">
-                <div class="code">&lt;!-- NAVBAR --&gt;
-&lt;app-header [titleHeader]="" [subTitleHeader]="" [hidden]="scanQrService.activeScan()"&gt;&lt;/app-header&gt;
-
-&lt;!-- COMPONENT CONTENT --&gt;
-&lt;ion-content [hidden]="scanQrService.activeScan()"&gt;
-  &lt;div class="main-container" [class.center]="showSpinner || (!data || data.length === 0)"&gt;
-    &lt;ng-container *ngIf="data &amp;&amp; !showSpinner"&gt;
-      &lt;div class="helper"&gt;
-        &lt;div class="resume"&gt;
-          &lt;h3 class="resume_text"&gt;
-            {{ data.length }} {{ data.length === 1 ? globalTexts.product : globalTexts.products }}
-            {{ globalTexts.toConfirm }}
-          &lt;/h3&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-
-      &lt;div class="content-view w-actions"&gt;
-        &lt;app-card-complete-spreadsheet
-          *ngFor="let item of data"
-          [productId]="item.productJde"
-          [productDescription]="item.Description"
-          [quantity]="item.spAmount"
-          [unit]="item.UM"
-          [selected]="!!item.checked"
-          [rowData]="item"
-          (viewClicked)="onViewProduct($event)"
-        &gt;&lt;/app-card-complete-spreadsheet&gt;
-      &lt;/div&gt;
-
-      &lt;div class="main-actions"&gt;
-        &lt;app-button
-          [btnId]="'spreadOkBtn'"
-          [btnClass]="'ion-btn success large'"
-          [btnIcon]="globalImages.ux_check_list"
-          [btnText]="globalTexts.confirmSpreadsheet"
-          [btnDisabled]="disabled"
-          (clicked)="closeSpreadsheet()"
-        &gt;&lt;/app-button&gt;
-      &lt;/div&gt;
-    &lt;/ng-container&gt;
-
-    &lt;app-spinners
-      [showSpinner]="showSpinner"
-      [type]="'circular'"
-      [textSpinner]="globalTexts.loading"
-    &gt;&lt;/app-spinners&gt;
-
-    &lt;ng-container *ngIf="!showSpinner &amp;&amp; (!data || data.length === 0)"&gt;
-      &lt;div class="welcome"&gt;
-        &lt;ion-icon class="big-icon text-main" [src]="globalImages.ux_halt"&gt;&lt;/ion-icon&gt;
-        &lt;h1 class="main text-main"&gt;Nada por aquí!&lt;/h1&gt;
-        &lt;p class="side text-side"&gt;Intenta con una búsqueda diferente...&lt;/p&gt;
-      &lt;/div&gt;
-    &lt;/ng-container&gt;
-  &lt;/div&gt;
-&lt;/ion-content&gt;</div>
-              </div>
-            </article>
-          </div>
-        </section>
-
-        <section class="section" id="template-main-filter">
-          <div class="section-header">
-            <span class="eyebrow">Template diagnosticado</span>
-            <h3>Pantalla main con side filter</h3>
-            <p>
-              Este patrón suma <code>page-layout</code> y <code>app-filter-panel</code>. El
-              helper crece con CTA de filtros y paginación. El main-actions puede combinar
-              progreso y acción primaria.
-            </p>
-          </div>
-
-          <div class="grid pattern">
-            <article class="card">
-              <div class="card-header">
-                <h4>Lectura del patrón</h4>
-                <span>Uso recomendado</span>
-              </div>
-              <div class="card-body">
-                <div class="info-list">
-                  <div class="info-item">
-                    <strong>Layout</strong>
-                    <code>page-layout</code> agrega el panel lateral sin romper la columna
-                    principal.
-                  </div>
-                  <div class="info-item">
-                    <strong>Helper expandido</strong>
-                    suma botón de filtros y paginación.
-                  </div>
-                  <div class="info-item">
-                    <strong>Main actions enriquecido</strong>
-                    puede llevar <code>.progress-container</code> y un
-                    <code>app-button</code> principal.
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <article class="card">
-              <div class="card-header">
-                <h4>Template real</h4>
-                <span>Referencia</span>
-              </div>
-              <div class="card-body">
-                <div class="code">&lt;!-- NAVBAR --&gt;
-&lt;app-header [titleHeader]="" [subTitleHeader]=""&gt;&lt;/app-header&gt;
-
-&lt;!-- COMPONENT CONTENT --&gt;
-&lt;ion-content&gt;
-  &lt;div class="page-layout" [class.filter-open]="isFilterOpen"&gt;
-    &lt;app-filter-panel
-      [isOpen]="isFilterOpen"
-      [searchPlaceholder]="globalTexts.searchPallet"
-      [searchValue]="searchText"
-      [checkboxOptions]="filterCheckboxOptions"
-      [showCheckboxes]="true"
-      [clearButtonText]="globalTexts.clearFilters"
-      [formGroup]="checkBoxses"
-      (searchChange)="onSearchChange($event)"
-      (filterChange)="applyFilters()"
-      (clearFilters)="clearFilters()"
-    &gt;&lt;/app-filter-panel&gt;
-
-    &lt;div class="main-container" [class.center]="showSpinner || (!hasElements || hasElements.length === 0)"&gt;
-      &lt;ng-container *ngIf="hasElements"&gt;
-        &lt;div class="helper w-filter"&gt;
-          &lt;div class="resume"&gt;
-            &lt;app-button
-              [btnId]="'paginationPrevBtn'"
-              [btnClass]="'ion-btn side small'"
-              [btnIcon]="!isFilterOpen ? globalImages.ux_filter_on : globalImages.ux_filter_off"
-              [btnText]="globalTexts.filters"
-              (clicked)="isFilterOpen = !isFilterOpen"
-            &gt;&lt;/app-button&gt;
-
-            &lt;h3 class="resume_text"&gt;
-              {{ filteredData.length }}
-              {{ filteredData.length === 1 ? globalTexts.pallet : globalTexts.pallets }}
-              {{ globalTexts.available_plural }}
-            &lt;/h3&gt;
-          &lt;/div&gt;
-
-          &lt;div class="pagination" *ngIf="totalPages &gt; 1"&gt;
-            &lt;app-button
-              [btnId]="'paginationPrevBtn'"
-              [btnClass]="'ion-btn side small'"
-              [btnIcon]="globalImages.ux_prev"
-              [btnText]="isFilterOpen ? '' : globalTexts.previous"
-              [btnDisabled]="!canGoPrevious"
-              (clicked)="previousPage()"
-            &gt;&lt;/app-button&gt;
-
-            &lt;span class="info"&gt;
-              {{globalTexts.page}} {{ currentPage }} {{globalTexts.of}} {{ totalPages }}
-            &lt;/span&gt;
-
-            &lt;app-button
-              [btnId]="'paginationNextBtn'"
-              [btnClass]="'ion-btn side small'"
-              [btnIcon]="globalImages.ux_next"
-              [btnText]="isFilterOpen ? '' : globalTexts.next"
-              [btnDisabled]="!canGoNext"
-              (clicked)="nextPage()"
-            &gt;&lt;/app-button&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-
-        &lt;div class="content-view w-actions"&gt;
-          &lt;ng-container *ngIf="!showSpinner &amp;&amp; paginatedData.length &gt; 0"&gt;
-            &lt;app-card-pallet
-              *ngFor="let pall of paginatedData; let i = index"
-              [cardVariant]="'picking'"
-              [palletData]="pall"
-              [index]="i"
-              [palletId]="pall.palletId"
-              [columns]="[
+                &lt;div class="content-view w-actions"&gt;
+                &lt;ng-container *ngIf="!showSpinner &amp;&amp; paginatedData.length &gt; 0"&gt;
+                &lt;app-card-pallet
+                *ngFor="let pall of paginatedData; let i = index"
+                [cardVariant]="'picking'"
+                [palletData]="pall"
+                [index]="i"
+                [palletId]="pall.palletId"
+                [columns]="[
                 { label: globalTexts.ship, value: pall.palletShed },
                 { label: globalTexts.row, value: pall.palletRow },
                 { label: globalTexts.position, value: pall.palletRack },
                 { label: globalTexts.level, value: pall.palletLevel }
-              ]"
-              [text1]="''"
-              [text2]="pall.palletQuantity"
-              [text3]="globalTexts.productAmount"
-              [expirationDate]="pall.expirations"
-              [showCheckbox]="true"
-              [isSelected]="pall.isSelected ?? false"
-              [showSkeleton]="showSpinner"
-              (selectionChange)="onPalletSelectionChange($event)"
-            &gt;&lt;/app-card-pallet&gt;
-          &lt;/ng-container&gt;
-        &lt;/div&gt;
+                ]"
+                [text1]="''"
+                [text2]="pall.palletQuantity"
+                [text3]="globalTexts.productAmount"
+                [expirationDate]="pall.expirations"
+                [showCheckbox]="true"
+                [isSelected]="pall.isSelected ?? false"
+                [showSkeleton]="showSpinner"
+                (selectionChange)="onPalletSelectionChange($event)"
+                &gt;&lt;/app-card-pallet&gt;
+                &lt;/ng-container&gt;
+                &lt;/div&gt;
 
-        &lt;div class="main-actions" *ngIf="!showSpinner &amp;&amp; paginatedData.length &gt; 0"&gt;
-          &lt;div class="progress-container" [ngClass]="progressStatusClass"&gt;
-            &lt;div class="progress-header"&gt;
-              {{ globalTexts.selectedQuantity }}:
-              {{ selectedQuantityLabel }} / {{ targetQuantityLabel }}
-            &lt;/div&gt;
+                &lt;div class="main-actions" *ngIf="!showSpinner &amp;&amp; paginatedData.length &gt; 0"&gt;
+                &lt;div class="progress-container" [ngClass]="progressStatusClass"&gt;
+                &lt;div class="progress-header"&gt;
+                {{ globalTexts.selectedQuantity }}:
+                {{ selectedQuantityLabel }} / {{ targetQuantityLabel }}
+                &lt;/div&gt;
 
-            &lt;div class="progress-bar"&gt;
-              &lt;div class="progress-fill" [style.width.%]="progressPercent"&gt;
+                &lt;div class="progress-bar"&gt;
+                &lt;div class="progress-fill" [style.width.%]="progressPercent"&gt;
                 &lt;span class="pending-quantity" [ngClass]="progressPercent &lt; 50 ? 'start':'end'"&gt;
-                  {{ pendingQuantityLabel }}
+                {{ pendingQuantityLabel }}
                 &lt;/span&gt;
-              &lt;/div&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;/div&gt;
 
-          &lt;app-button
-            [btnId]="'setOpenConfirmationBtn'"
-            [btnClass]="'ion-btn success large'"
-            [btnIcon]="globalImages.ux_save"
-            [btnText]="globalTexts.accept"
-            [btnDisabled]="!selectedQuantity || rawProgressPercent &gt; 100"
-            (clicked)="setOpenConfirmation(true)"
-          &gt;&lt;/app-button&gt;
-        &lt;/div&gt;
-      &lt;/ng-container&gt;
+                &lt;app-button
+                [btnId]="'setOpenConfirmationBtn'"
+                [btnClass]="'ion-btn success large'"
+                [btnIcon]="globalImages.ux_save"
+                [btnText]="globalTexts.accept"
+                [btnDisabled]="!selectedQuantity || rawProgressPercent &gt; 100"
+                (clicked)="setOpenConfirmation(true)"
+                &gt;&lt;/app-button&gt;
+                &lt;/div&gt;
+                &lt;/ng-container&gt;
 
-      &lt;app-spinners
-        [showSpinner]="showSpinner"
-        [type]="'circular'"
-        [textSpinner]="globalTexts.loading"
-      &gt;&lt;/app-spinners&gt;
+                &lt;app-spinners
+                [showSpinner]="showSpinner"
+                [type]="'circular'"
+                [textSpinner]="globalTexts.loading"
+                &gt;&lt;/app-spinners&gt;
 
-      &lt;ng-container *ngIf="!showSpinner &amp;&amp; (!hasElements || hasElements.length === 0)"&gt;
-        &lt;div class="welcome"&gt;
-          &lt;ion-icon class="big-icon text-main" [src]="globalImages.ux_halt"&gt;&lt;/ion-icon&gt;
-          &lt;h1 class="main text-main"&gt;Nada por aquí!&lt;/h1&gt;
-          &lt;p class="side text-side"&gt;Intenta con una búsqueda diferente...&lt;/p&gt;
-        &lt;/div&gt;
-      &lt;/ng-container&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/ion-content&gt;</div>
-              </div>
-            </article>
-          </div>
-        </section>
+                &lt;ng-container *ngIf="!showSpinner &amp;&amp; (!hasElements || hasElements.length === 0)"&gt;
+                &lt;div class="welcome"&gt;
+                &lt;ion-icon class="big-icon text-main" [src]="globalImages.ux_halt"&gt;&lt;/ion-icon&gt;
+                &lt;h1 class="main text-main"&gt;Nada por aquí!&lt;/h1&gt;
+                &lt;p class="side text-side"&gt;Intenta con una búsqueda diferente...&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;/ng-container&gt;
+                &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;/ion-content&gt;</div>
+            </div>
+          </article>
+        </div>
+      </section>
 
-        <section class="section" id="rules">
-          <div class="section-header">
-            <span class="eyebrow">Reglas finales</span>
-            <h3>Criterios de uso para que el sistema no se desordene</h3>
+      <section class="section" id="rules">
+        <div class="section-header">
+          <span class="eyebrow">Reglas finales</span>
+          <h3>Criterios de uso para que el sistema no se desordene</h3>
+          <p>
+            Estas reglas cierran la lectura del documento y dejan fijado cómo debe
+            evolucionar el DS sin romper la base del proyecto.
+          </p>
+        </div>
+
+        <div class="grid cards">
+          <article class="card pad">
+            <h4>Regla 1</h4>
             <p>
-              Estas reglas cierran la lectura del documento y dejan fijado cómo debe
-              evolucionar el DS sin romper la base del proyecto.
+              Todo icono SVG del sistema debe tener <code>fill="currentColor"</code>.
+            </p>
+          </article>
+
+          <article class="card pad">
+            <h4>Regla 2</h4>
+            <p>
+              Todo click del usuario debe resolverse mediante <code>app-button</code>.
+            </p>
+          </article>
+
+          <article class="card pad">
+            <h4>Regla 3</h4>
+            <p>
+              <code>welcome</code> se documenta como chapa informativa de sección y también
+              como empty state.
+            </p>
+          </article>
+
+          <article class="card pad">
+            <h4>Regla 4</h4>
+            <p>
+              <code>search_bar-container</code> se documenta como addon singleton por
+              componente o pantalla.
+            </p>
+          </article>
+
+          <article class="card pad">
+            <h4>Regla 5</h4>
+            <p>
+              El DS debe reflejar templates reales de Ionic y Angular, no ejemplos HTML
+              abstractos sin correspondencia con el proyecto.
+            </p>
+          </article>
+
+          <article class="card pad">
+            <h4>Regla 6</h4>
+            <p>
+              Admin es la misma semántica del sistema a una escala visual menor, no otro
+              design system.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="ds-report-section" id="proyectStats">
+        <div class="ds-report-header">
+          <div>
+            <span class="ds-report-eyebrow">SCSS CHANGE REPORT</span>
+            <h2>Volumen real de cambios entre branches</h2>
+            <p>
+              Comparativa entre <strong>develop</strong> y
+              <strong>development_qa</strong>, enfocada en deuda visual,
+              consolidacion de estilos y simplificacion del sistema.
             </p>
           </div>
+          <div class="ds-report-pill">Exact Git Metrics</div>
+        </div>
 
-          <div class="grid cards">
-            <article class="card pad">
-              <h4>Regla 1</h4>
+        <div class="ds-hero-grid">
+          <article class="ds-hero-card main">
+            <span class="ds-card-label">Neto optimizado</span>
+            <strong class="ds-hero-number">-7.182</strong>
+            <p>lineas SCSS netas menos en la branch destino</p>
+          </article>
+
+          <article class="ds-hero-card">
+            <span class="ds-card-label">Lineas agregadas</span>
+            <strong class="ds-card-number">3.397</strong>
+            <p>nuevos estilos, consolidacion y refactor de base</p>
+          </article>
+
+          <article class="ds-hero-card">
+            <span class="ds-card-label">Lineas eliminadas</span>
+            <strong class="ds-card-number">10.579</strong>
+            <p>poda fuerte de estilos legacy y capas especificas</p>
+          </article>
+
+          <article class="ds-hero-card">
+            <span class="ds-card-label">Archivos tocados</span>
+            <strong class="ds-card-number">103</strong>
+            <p>alcance amplio sobre pages, shared, admin y global</p>
+          </article>
+        </div>
+
+        <div class="ds-mini-grid">
+          <article class="ds-mini-card danger">
+            <span>Baja pura</span>
+            <strong>54</strong>
+          </article>
+          <article class="ds-mini-card success">
+            <span>Alta pura</span>
+            <strong>3</strong>
+          </article>
+          <article class="ds-mini-card info">
+            <span>Cambios mixtos</span>
+            <strong>46</strong>
+          </article>
+          <article class="ds-mini-card warning">
+            <span>Reduccion neta</span>
+            <strong>67.9%</strong>
+          </article>
+        </div>
+
+        <div class="ds-report-grid">
+          <article class="ds-report-panel">
+            <div class="ds-panel-head">
+              <h3>Distribucion del churn</h3>
+              <span>por zona del proyecto</span>
+            </div>
+
+            <div class="ds-impact-list">
+              <div class="ds-impact-item">
+                <div class="ds-impact-row">
+                  <span>UI pages</span>
+                  <strong>5.660</strong>
+                </div>
+                <div class="ds-bar"><i style="width: 100%"></i></div>
+              </div>
+
+              <div class="ds-impact-item">
+                <div class="ds-impact-row">
+                  <span>Administrator</span>
+                  <strong>3.265</strong>
+                </div>
+                <div class="ds-bar"><i style="width: 57.7%"></i></div>
+              </div>
+
+              <div class="ds-impact-item">
+                <div class="ds-impact-row">
+                  <span>Shared components</span>
+                  <strong>2.888</strong>
+                </div>
+                <div class="ds-bar"><i style="width: 51%"></i></div>
+              </div>
+
+              <div class="ds-impact-item">
+                <div class="ds-impact-row">
+                  <span>Global</span>
+                  <strong>1.783</strong>
+                </div>
+                <div class="ds-bar"><i style="width: 31.5%"></i></div>
+              </div>
+
+              <div class="ds-impact-item">
+                <div class="ds-impact-row">
+                  <span>Theme</span>
+                  <strong>380</strong>
+                </div>
+                <div class="ds-bar"><i style="width: 6.7%"></i></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="ds-report-panel">
+            <div class="ds-panel-head">
+              <h3>Top reducciones</h3>
+              <span>mayor poda visible</span>
+            </div>
+
+            <div class="ds-impact-list">
+              <div class="ds-impact-item">
+                <div class="ds-impact-row">
+                  <span>card-pallet.component.scss</span>
+                  <strong>-922</strong>
+                </div>
+                <div class="ds-bar danger"><i style="width: 100%"></i></div>
+              </div>
+
+              <div class="ds-impact-item">
+                <div class="ds-impact-row">
+                  <span>availability.page.scss</span>
+                  <strong>-692</strong>
+                </div>
+                <div class="ds-bar danger"><i style="width: 75%"></i></div>
+              </div>
+
+              <div class="ds-impact-item">
+                <div class="ds-impact-row">
+                  <span>storage-pallet.page.scss</span>
+                  <strong>-534</strong>
+                </div>
+                <div class="ds-bar danger"><i style="width: 57.9%"></i></div>
+              </div>
+
+              <div class="ds-impact-item">
+                <div class="ds-impact-row">
+                  <span>spreadsheet-with-quota-print-tags.page.scss</span>
+                  <strong>-486</strong>
+                </div>
+                <div class="ds-bar danger"><i style="width: 52.7%"></i></div>
+              </div>
+
+              <div class="ds-impact-item">
+                <div class="ds-impact-row">
+                  <span>shared/button.component.scss</span>
+                  <strong>-467</strong>
+                </div>
+                <div class="ds-bar danger"><i style="width: 50.7%"></i></div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="ds-report-grid secondary">
+          <article class="ds-report-panel">
+            <div class="ds-panel-head">
+              <h3>Top altas</h3>
+              <span>zonas reforzadas</span>
+            </div>
+
+            <div class="ds-impact-list">
+              <div class="ds-impact-item">
+                <div class="ds-impact-row">
+                  <span>src/global.scss</span>
+                  <strong>+1670</strong>
+                </div>
+                <div class="ds-bar success"><i style="width: 100%"></i></div>
+              </div>
+
+              <div class="ds-impact-item">
+                <div class="ds-impact-row">
+                  <span>shared/old-button.component.scss</span>
+                  <strong>+467</strong>
+                </div>
+                <div class="ds-bar success"><i style="width: 28%"></i></div>
+              </div>
+
+              <div class="ds-impact-item">
+                <div class="ds-impact-row">
+                  <span>theme/utilities.scss</span>
+                  <strong>+326</strong>
+                </div>
+                <div class="ds-bar success"><i style="width: 19.5%"></i></div>
+              </div>
+
+              <div class="ds-impact-item">
+                <div class="ds-impact-row">
+                  <span>admin old-button.component.scss</span>
+                  <strong>+295</strong>
+                </div>
+                <div class="ds-bar success"><i style="width: 17.7%"></i></div>
+              </div>
+
+              <div class="ds-impact-item">
+                <div class="ds-impact-row">
+                  <span>admin menu.component.scss</span>
+                  <strong>+157</strong>
+                </div>
+                <div class="ds-bar success"><i style="width: 9.4%"></i></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="ds-report-panel">
+            <div class="ds-panel-head">
+              <h3>Lectura ejecutiva</h3>
+              <span>que significa</span>
+            </div>
+
+            <div class="ds-insight-box">
               <p>
-                Todo icono SVG del sistema debe tener <code>fill="currentColor"</code>.
+                Este cambio no es cosmetico. El proyecto elimina mucho mas SCSS del que agrega,
+                con una concentracion muy fuerte en pages y componentes compartidos.
               </p>
-            </article>
+            </div>
 
-            <article class="card pad">
-              <h4>Regla 2</h4>
+            <ul class="ds-insight-list">
+              <li><strong>La branch reduce peso visual neto</strong>, no solo redistribuye archivos.</li>
+              <li><strong>UI pages</strong> es la zona mas impactada, señal de simplificacion por pantalla.</li>
+              <li><strong>Global y theme crecen</strong>, lo que sugiere centralizacion de reglas comunes.</li>
+              <li><strong>old-button sube y button baja</strong>, posible reemplazo, rollback o migracion de componente
+                base.</li>
+            </ul>
+
+            <div class="ds-note-box">
+              <strong>Insight:</strong>
               <p>
-                Todo click del usuario debe resolverse mediante <code>app-button</code>.
+                La lectura mas consistente es una poda de estilos legacy con traslado parcial
+                hacia capas globales y utilitarias.
               </p>
-            </article>
-
-            <article class="card pad">
-              <h4>Regla 3</h4>
-              <p>
-                <code>welcome</code> se documenta como chapa informativa de sección y también
-                como empty state.
-              </p>
-            </article>
-
-            <article class="card pad">
-              <h4>Regla 4</h4>
-              <p>
-                <code>search_bar-container</code> se documenta como addon singleton por
-                componente o pantalla.
-              </p>
-            </article>
-
-            <article class="card pad">
-              <h4>Regla 5</h4>
-              <p>
-                El DS debe reflejar templates reales de Ionic y Angular, no ejemplos HTML
-                abstractos sin correspondencia con el proyecto.
-              </p>
-            </article>
-
-            <article class="card pad">
-              <h4>Regla 6</h4>
-              <p>
-                Admin es la misma semántica del sistema a una escala visual menor, no otro
-                design system.
-              </p>
-            </article>
-          </div>
-        </section>
-
-        <section class="ds-report-section" id="proyectStats>
-  <div class="ds-report-header">
-    <div>
-      <span class="ds-report-eyebrow">SCSS CHANGE REPORT</span>
-      <h2>Volumen real de cambios entre branches</h2>
-      <p>
-        Comparativa entre <strong>develop</strong> y
-        <strong>development_qa</strong>, enfocada en deuda visual,
-        consolidacion de estilos y simplificacion del sistema.
-      </p>
-    </div>
-    <div class="ds-report-pill">Exact Git Metrics</div>
-  </div>
-
-  <div class="ds-hero-grid">
-    <article class="ds-hero-card main">
-      <span class="ds-card-label">Neto optimizado</span>
-      <strong class="ds-hero-number">-7.182</strong>
-      <p>lineas SCSS netas menos en la branch destino</p>
-    </article>
-
-    <article class="ds-hero-card">
-      <span class="ds-card-label">Lineas agregadas</span>
-      <strong class="ds-card-number">3.397</strong>
-      <p>nuevos estilos, consolidacion y refactor de base</p>
-    </article>
-
-    <article class="ds-hero-card">
-      <span class="ds-card-label">Lineas eliminadas</span>
-      <strong class="ds-card-number">10.579</strong>
-      <p>poda fuerte de estilos legacy y capas especificas</p>
-    </article>
-
-    <article class="ds-hero-card">
-      <span class="ds-card-label">Archivos tocados</span>
-      <strong class="ds-card-number">103</strong>
-      <p>alcance amplio sobre pages, shared, admin y global</p>
-    </article>
-  </div>
-
-  <div class="ds-mini-grid">
-    <article class="ds-mini-card danger">
-      <span>Baja pura</span>
-      <strong>54</strong>
-    </article>
-    <article class="ds-mini-card success">
-      <span>Alta pura</span>
-      <strong>3</strong>
-    </article>
-    <article class="ds-mini-card info">
-      <span>Cambios mixtos</span>
-      <strong>46</strong>
-    </article>
-    <article class="ds-mini-card warning">
-      <span>Reduccion neta</span>
-      <strong>67.9%</strong>
-    </article>
-  </div>
-
-  <div class="ds-report-grid">
-    <article class="ds-report-panel">
-      <div class="ds-panel-head">
-        <h3>Distribucion del churn</h3>
-        <span>por zona del proyecto</span>
-      </div>
-
-      <div class="ds-impact-list">
-        <div class="ds-impact-item">
-          <div class="ds-impact-row">
-            <span>UI pages</span>
-            <strong>5.660</strong>
-          </div>
-          <div class="ds-bar"><i style="width: 100%"></i></div>
+            </div>
+          </article>
         </div>
+      </section>
 
-        <div class="ds-impact-item">
-          <div class="ds-impact-row">
-            <span>Administrator</span>
-            <strong>3.265</strong>
-          </div>
-          <div class="ds-bar"><i style="width: 57.7%"></i></div>
-        </div>
-
-        <div class="ds-impact-item">
-          <div class="ds-impact-row">
-            <span>Shared components</span>
-            <strong>2.888</strong>
-          </div>
-          <div class="ds-bar"><i style="width: 51%"></i></div>
-        </div>
-
-        <div class="ds-impact-item">
-          <div class="ds-impact-row">
-            <span>Global</span>
-            <strong>1.783</strong>
-          </div>
-          <div class="ds-bar"><i style="width: 31.5%"></i></div>
-        </div>
-
-        <div class="ds-impact-item">
-          <div class="ds-impact-row">
-            <span>Theme</span>
-            <strong>380</strong>
-          </div>
-          <div class="ds-bar"><i style="width: 6.7%"></i></div>
-        </div>
-      </div>
-    </article>
-
-    <article class="ds-report-panel">
-      <div class="ds-panel-head">
-        <h3>Top reducciones</h3>
-        <span>mayor poda visible</span>
-      </div>
-
-      <div class="ds-impact-list">
-        <div class="ds-impact-item">
-          <div class="ds-impact-row">
-            <span>card-pallet.component.scss</span>
-            <strong>-922</strong>
-          </div>
-          <div class="ds-bar danger"><i style="width: 100%"></i></div>
-        </div>
-
-        <div class="ds-impact-item">
-          <div class="ds-impact-row">
-            <span>availability.page.scss</span>
-            <strong>-692</strong>
-          </div>
-          <div class="ds-bar danger"><i style="width: 75%"></i></div>
-        </div>
-
-        <div class="ds-impact-item">
-          <div class="ds-impact-row">
-            <span>storage-pallet.page.scss</span>
-            <strong>-534</strong>
-          </div>
-          <div class="ds-bar danger"><i style="width: 57.9%"></i></div>
-        </div>
-
-        <div class="ds-impact-item">
-          <div class="ds-impact-row">
-            <span>spreadsheet-with-quota-print-tags.page.scss</span>
-            <strong>-486</strong>
-          </div>
-          <div class="ds-bar danger"><i style="width: 52.7%"></i></div>
-        </div>
-
-        <div class="ds-impact-item">
-          <div class="ds-impact-row">
-            <span>shared/button.component.scss</span>
-            <strong>-467</strong>
-          </div>
-          <div class="ds-bar danger"><i style="width: 50.7%"></i></div>
-        </div>
-      </div>
-    </article>
-  </div>
-
-  <div class="ds-report-grid secondary">
-    <article class="ds-report-panel">
-      <div class="ds-panel-head">
-        <h3>Top altas</h3>
-        <span>zonas reforzadas</span>
-      </div>
-
-      <div class="ds-impact-list">
-        <div class="ds-impact-item">
-          <div class="ds-impact-row">
-            <span>src/global.scss</span>
-            <strong>+1670</strong>
-          </div>
-          <div class="ds-bar success"><i style="width: 100%"></i></div>
-        </div>
-
-        <div class="ds-impact-item">
-          <div class="ds-impact-row">
-            <span>shared/old-button.component.scss</span>
-            <strong>+467</strong>
-          </div>
-          <div class="ds-bar success"><i style="width: 28%"></i></div>
-        </div>
-
-        <div class="ds-impact-item">
-          <div class="ds-impact-row">
-            <span>theme/utilities.scss</span>
-            <strong>+326</strong>
-          </div>
-          <div class="ds-bar success"><i style="width: 19.5%"></i></div>
-        </div>
-
-        <div class="ds-impact-item">
-          <div class="ds-impact-row">
-            <span>admin old-button.component.scss</span>
-            <strong>+295</strong>
-          </div>
-          <div class="ds-bar success"><i style="width: 17.7%"></i></div>
-        </div>
-
-        <div class="ds-impact-item">
-          <div class="ds-impact-row">
-            <span>admin menu.component.scss</span>
-            <strong>+157</strong>
-          </div>
-          <div class="ds-bar success"><i style="width: 9.4%"></i></div>
-        </div>
-      </div>
-    </article>
-
-    <article class="ds-report-panel">
-      <div class="ds-panel-head">
-        <h3>Lectura ejecutiva</h3>
-        <span>que significa</span>
-      </div>
-
-      <div class="ds-insight-box">
+      <section class="footer">
         <p>
-          Este cambio no es cosmetico. El proyecto elimina mucho mas SCSS del que agrega,
-          con una concentracion muy fuerte en pages y componentes compartidos.
+          Agrostock Design System V1, documentación base para la definición de estructura, componentes, variantes y
+          patrones de interfaz en el entorno Ionic/Angular del proyecto.
         </p>
-      </div>
-
-      <ul class="ds-insight-list">
-        <li><strong>La branch reduce peso visual neto</strong>, no solo redistribuye archivos.</li>
-        <li><strong>UI pages</strong> es la zona mas impactada, señal de simplificacion por pantalla.</li>
-        <li><strong>Global y theme crecen</strong>, lo que sugiere centralizacion de reglas comunes.</li>
-        <li><strong>old-button sube y button baja</strong>, posible reemplazo, rollback o migracion de componente base.</li>
-      </ul>
-
-      <div class="ds-note-box">
-        <strong>Insight:</strong>
         <p>
-          La lectura mas consistente es una poda de estilos legacy con traslado parcial
-          hacia capas globales y utilitarias.
+          Actualizado el 14 de abril de 2026.
         </p>
-      </div>
-    </article>
+      </section>
+    </main>
   </div>
-</section>
+  <script>
+    const mobileSidebar = document.getElementById('mobileSidebar');
+    const mobileNavToggle = document.getElementById('mobileNavToggle');
+    const mobileNavClose = document.getElementById('mobileNavClose');
+    const mobileNavOverlay = document.getElementById('mobileNavOverlay');
+    const mobileNavLinks = mobileSidebar.querySelectorAll('a');
 
-        <section class="footer">
-          <p>
-              Agrostock Design System V1, documentación base para la definición de estructura, componentes, variantes y patrones de interfaz en el entorno Ionic/Angular del proyecto.
-          </p>
-          <p>
-            Actualizado el 14 de abril de 2026.
-          </p>
-        </section>
-      </main>
-    </div>
-    <script>
-  const mobileSidebar = document.getElementById('mobileSidebar');
-  const mobileNavToggle = document.getElementById('mobileNavToggle');
-  const mobileNavClose = document.getElementById('mobileNavClose');
-  const mobileNavOverlay = document.getElementById('mobileNavOverlay');
-  const mobileNavLinks = mobileSidebar.querySelectorAll('a');
+    function openMobileNav() {
+      mobileSidebar.classList.add('is-open');
+      mobileNavOverlay.classList.add('is-open');
+    }
 
-  function openMobileNav() {
-    mobileSidebar.classList.add('is-open');
-    mobileNavOverlay.classList.add('is-open');
-  }
+    function closeMobileNav() {
+      mobileSidebar.classList.remove('is-open');
+      mobileNavOverlay.classList.remove('is-open');
+    }
 
-  function closeMobileNav() {
-    mobileSidebar.classList.remove('is-open');
-    mobileNavOverlay.classList.remove('is-open');
-  }
+    mobileNavToggle.addEventListener('click', openMobileNav);
+    mobileNavClose.addEventListener('click', closeMobileNav);
+    mobileNavOverlay.addEventListener('click', closeMobileNav);
 
-  mobileNavToggle.addEventListener('click', openMobileNav);
-  mobileNavClose.addEventListener('click', closeMobileNav);
-  mobileNavOverlay.addEventListener('click', closeMobileNav);
+    mobileNavLinks.forEach(link => {
+      link.addEventListener('click', closeMobileNav);
+    });
+  </script>
+</body>
 
-  mobileNavLinks.forEach(link => {
-    link.addEventListener('click', closeMobileNav);
-  });
-</script>
-  </body>
 </html>
